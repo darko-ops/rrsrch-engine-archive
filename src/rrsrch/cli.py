@@ -10,7 +10,9 @@
   rrsrch read stats                        claims, rejections by rule, coverage
   rrsrch gate "SENTENCE" CLAIM_ID [...]    check a sentence against ledger claims
   rrsrch gate-eval                         score the gate on its evaluation set
+  rrsrch write "QUESTION"                  answer from the ledger; every sentence gated
   rrsrch bench check                       validate the benchmark against the answer key
+  rrsrch bench run [--only ID]             write and score a report for each benchmark question
 """
 from __future__ import annotations
 
@@ -280,6 +282,45 @@ def cmd_bench_check(args) -> int:
     return 1 if rep.problems else 0
 
 
+def cmd_write(args) -> int:
+    from .ledger import db
+    from .reader.llm import LLM
+    from .writer import write as writer
+    with db.connect() as conn:
+        db.migrate(conn)
+        rep = writer.write(conn, LLM.from_env(), args.question)
+    if rep.bad_reply:
+        print(f"no report: {rep.bad_reply}", file=sys.stderr)
+    print(f"verdict: {rep.verdict}\n\n{rep.render()}\n")
+    for s in rep.sentences:
+        if not s.verdict.passed:
+            print(f"  refused ({s.verdict.rule}): {s.text}\n      {s.verdict.detail}")
+    f = rep.faithfulness
+    print(f"report {rep.id}: {len(rep.kept)}/{len(rep.sentences)} sentences passed the gate"
+          + (f" ({f:.0%})" if f is not None else "") + f"; {len(rep.shown)} claims shown")
+    return 0 if rep.kept else 1
+
+
+def cmd_bench_run(args) -> int:
+    from .bench import questions, run
+    from .ledger import db
+    from .reader.llm import LLM
+    with db.connect() as conn:
+        db.migrate(conn)
+        score = run.run(conn, LLM.from_env(), questions.load(), only=args.only)
+    s = score.summary()
+    pct = lambda x: "n/a" if x is None else f"{x:.0%}"  # noqa: E731
+    print(f"\n{s['questions']} questions")
+    print(f"faithfulness: {pct(s['faithfulness'])} of {s['sentences_proposed']} proposed sentences passed the gate")
+    print(f"coverage:     {pct(s['coverage'])} of expected points made (model-judged)")
+    print(f"verdicts:     {s['verdicts_matched']}/{s['questions']} matched the answer key")
+    print(f"writer refusals by rule: {s['writer_rejections'] or 'none'}")
+    r = s["reader"]
+    print(f"reader: {r['claims_accepted']} claims accepted, rejection rate {pct(r['rejection_rate'])}, "
+          f"refused by rule {r['claims_refused'] or 'none'}")
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(prog="rrsrch")
     sub = p.add_subparsers(dest="group", required=True)
@@ -315,6 +356,12 @@ def main(argv: list[str] | None = None) -> int:
     bc = bench.add_parser("check", help="validate the benchmark against the answer key")
     bc.add_argument("-v", "--verbose", action="store_true")
     bc.set_defaults(fn=cmd_bench_check)
+    br = bench.add_parser("run", help="write and score a report for each benchmark question")
+    br.add_argument("--only", action="append", metavar="ID", help="only this question (repeatable)")
+    br.set_defaults(fn=cmd_bench_run)
+    w = sub.add_parser("write", help="answer a question from the ledger, every sentence gated")
+    w.add_argument("question")
+    w.set_defaults(fn=cmd_write)
     args = p.parse_args(argv)
     return args.fn(args)
 

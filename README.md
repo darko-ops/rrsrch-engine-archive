@@ -13,8 +13,8 @@ osteoarthritis, over a fixed corpus. The build order:
 
 1. **Fixed corpus**: the studies included in recent meta-analyses, their
    trial registrations, and the claim-ledger schema. ← *done*
-2. **Reader → ledger → citation gate**, with the clinical vocabulary, and the
-   benchmark. ← *built; extraction run and faithfulness measurement pending*
+2. **Reader → ledger → citation gate → writer**, with the clinical vocabulary
+   and the benchmark. ← *built; waiting on the first run on the DGX Spark*
 3. Skeptic and trial reconciliation.
 4. Live search, editable plan, and the reading interface.
 
@@ -98,6 +98,32 @@ uv run rrsrch read stats            # proposed vs accepted, rejections by rule
 uv run rrsrch gate "SENTENCE" 12 15 # check a sentence against ledger claims 12 and 15
 ```
 
+## The writer
+
+The writer answers a question from the ledger, never from the papers directly.
+It picks claims that share the question's outcome, comparator or follow-up
+time (by the same vocabulary the gate uses), and gives the model only those
+claims, numbered. The model returns a verdict and sentences, each citing the
+claims it rests on. **Every sentence then faces the citation gate against
+exactly the claims it cites.** A sentence that fails is left out of the
+report and kept in `report_sentences` with the rule that refused it.
+
+One rule is added for writing across studies: "two trials found…" passes only
+when the sentence cites exactly two different studies.
+
+```bash
+uv run rrsrch write "Do MSCs reduce knee pain at 12 months compared with hyaluronic acid?"
+uv run rrsrch bench run                   # all 25 questions: faithfulness, coverage, verdicts, rejections
+uv run rrsrch bench run --only pain-12m   # one question
+```
+
+`bench run` reports the numbers together: **faithfulness** (sentences the
+gate passed / sentences proposed), **coverage** (expected points made,
+judged by the model, so it's labeled as such), **verdict agreement** with the
+answer key, and the reader's and writer's **rejections by rule**. A report
+can score high on faithfulness by saying little, which is why coverage is
+never reported without it.
+
 ## Running it
 
 Needs Python 3.12+, [uv](https://docs.astral.sh/uv/) and Docker.
@@ -129,7 +155,8 @@ src/rrsrch/corpus/             discover (Table 1 → studies), snapshots, text e
 src/rrsrch/ledger/             Postgres: migrations and corpus load
 src/rrsrch/check/              clinical vocabulary and the citation gate
 src/rrsrch/reader/             claim extraction with a local model
-src/rrsrch/bench/              benchmark loading and checks
+src/rrsrch/writer/             claim retrieval and gated report writing
+src/rrsrch/bench/              benchmark checks and the benchmark run
 benchmark/questions.yaml       the benchmark questions and expected answers
 ```
 
