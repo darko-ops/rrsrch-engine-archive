@@ -13,8 +13,8 @@ osteoarthritis, over a fixed corpus. The build order:
 
 1. **Fixed corpus**: the studies included in recent meta-analyses, their
    trial registrations, and the claim-ledger schema. ← *done*
-2. **Reader → ledger → citation gate**, with the clinical vocabulary. ← *built;
-   extraction run and faithfulness measurement pending*
+2. **Reader → ledger → citation gate**, with the clinical vocabulary, and the
+   benchmark. ← *built; extraction run and faithfulness measurement pending*
 3. Skeptic and trial reconciliation.
 4. Live search, editable plan, and the reading interface.
 
@@ -63,6 +63,16 @@ to catch are kept in the set as `known_gap` and reported, not dropped:
 - generalizing one trial to a class ("MSCs reduce pain") from one study.
 
 The writer's sentences face the same gate as the reader's claims.
+
+## The benchmark
+
+[`benchmark/questions.yaml`](benchmark/questions.yaml) has 25 questions. Each
+expected answer comes from the meta-analyses, as a verdict (including
+`contested` where they disagree), the points a complete answer must make, and
+the findings behind it, each quoted verbatim. `rrsrch bench check` proves the
+quotes. Reading the meta-analyses closely turned up contradictions in most of
+them; see [`benchmark/README.md`](benchmark/README.md). The questions are a
+draft until a domain researcher reviews them.
 
 ## The reader
 
@@ -117,6 +127,10 @@ db/migrations/                 the ledger schema
 src/rrsrch/sources/            Europe PMC and ClinicalTrials.gov clients
 src/rrsrch/corpus/             discover (Table 1 → studies), snapshots, text extraction
 src/rrsrch/ledger/             Postgres: migrations and corpus load
+src/rrsrch/check/              clinical vocabulary and the citation gate
+src/rrsrch/reader/             claim extraction with a local model
+src/rrsrch/bench/              benchmark loading and checks
+benchmark/questions.yaml       the benchmark questions and expected answers
 ```
 
 ## License
