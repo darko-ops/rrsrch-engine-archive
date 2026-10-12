@@ -54,7 +54,7 @@ def corpus_dir(tmp_path, monkeypatch):
 
 
 def test_load_is_repeatable_and_links_trials(conn, corpus_dir):
-    assert db.migrate(conn) == ["0001_ledger.sql"]
+    assert db.migrate(conn) == ["0001_ledger.sql", "0002_reader.sql"]
     assert db.migrate(conn) == []
     rep = db.load_corpus(conn, corpus_dir)
     assert (rep.sources, rep.trials, rep.links) == (1, 1, 1)

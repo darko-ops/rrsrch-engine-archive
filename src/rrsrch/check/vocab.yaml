@@ -1,0 +1,182 @@
+# Clinical vocabulary for the citation gate.
+#
+# This file is meant to be read and corrected by a regen med researcher, not
+# just a programmer. Each entity has a canonical id, an optional parent (a
+# sentence may name the parent when the claim names the child, never the
+# reverse), and the patterns that mean it. Patterns are regular expressions
+# matched on word boundaries. A pattern that starts with two capitals (an
+# abbreviation like HA, OA or BM-MSC) is case-sensitive, so "HA" never matches
+# the word "ha"; every other pattern ignores case.
+#
+# Order matters within a group: more specific entries come first, and a span
+# of text is claimed by the first entity that matches it.
+
+cell_type:
+  - id: bm_msc
+    parent: msc
+    patterns: ['bone[- ]marrow[- ](?:derived )?(?:mesenchymal (?:stem|stromal) cells?|MSCs?|stem cells?|stromal cells?)', 'BM[- ]?MSCs?', 'BMSCs?', 'stempeucel']
+  - id: bmac
+    parent: msc
+    patterns: ['bone marrow aspirate concentrates?', 'BMAC', 'buffy coat']
+  - id: ad_msc
+    parent: msc
+    patterns: ['adipose[- ](?:tissue[- ])?(?:derived )?(?:mesenchymal (?:stem|stromal) cells?|MSCs?|stem cells?|stromal cells?)', 'AD[- ]?MSCs?', 'ADSCs?', 'ASCs?']
+  - id: svf
+    parent: msc
+    patterns: ['stromal vascular fractions?', 'SVF']
+  - id: ucb_msc
+    parent: uc_msc
+    patterns: ['umbilical cord blood[- ](?:derived )?(?:mesenchymal (?:stem|stromal) cells?|MSCs?)', 'hUCB[- ]?MSCs?', 'UCB[- ]?MSCs?', 'cartistem']
+  - id: uc_msc
+    parent: msc
+    patterns: ['umbilical cord[- ](?:derived )?(?:mesenchymal (?:stem|stromal) cells?|MSCs?)', "wharton'?s jelly", 'hUC[- ]?MSCs?', 'UC[- ]?MSCs?']
+  - id: placental_msc
+    parent: msc
+    patterns: ['placental (?:mesenchymal (?:stem|stromal) cells?|MSCs?)']
+  - id: pb_msc
+    parent: msc
+    patterns: ['peripheral blood (?:stem cells?|MSCs?)', 'PBSCs?']
+  - id: msc
+    patterns: ['mesenchymal (?:stem|stromal|progenitor)(?:/stromal)? cells?', 'MSCs?', 'stem cells?', 'stromal cells?']
+
+comparator:
+  - id: hyaluronic_acid
+    patterns: ['hyaluronic acid', 'hyaluronan', 'HA', 'viscosupplementation']
+  - id: placebo
+    patterns: ['placebos?', 'saline', 'sham']
+  - id: prp
+    patterns: ['platelet[- ]rich plasma', 'PRP']
+  - id: corticosteroid
+    patterns: ['corticosteroids?', 'steroids?', 'triamcinolone']
+  - id: aci
+    patterns: ['(?:matrix[- ]induced )?autologous chondrocyte implantation', 'M?ACI']
+  - id: hto
+    patterns: ['high tibial osteotomy', 'HTO']
+  - id: microfracture
+    patterns: ['microfractures?', 'subchondral drilling']
+  - id: conservative
+    patterns: ['conservative (?:treatment|management|care)', 'exercise therapy', 'physiotherapy']
+
+outcome:
+  - id: womac_pain
+    parent: womac
+    patterns: ['WOMAC[- ]pain', 'pain subscale of (?:the )?WOMAC']
+  - id: womac_function
+    parent: womac
+    patterns: ['WOMAC[- ](?:physical )?function', 'function subscale of (?:the )?WOMAC']
+  - id: womac_stiffness
+    parent: womac
+    patterns: ['WOMAC[- ]stiffness']
+  - id: womac
+    parent: clinical_score
+    patterns: ['WOMAC', 'Western Ontario and McMaster']
+  - id: koos
+    parent: clinical_score
+    patterns: ['KOOS', 'knee injury and osteoarthritis outcome score', 'osteo-?arthritis outcome score']
+  - id: vas_pain
+    parent: pain
+    patterns: ['VAS', 'visual analog(?:ue)? (?:scale|pain scores?)']
+  - id: nrs_pain
+    parent: pain
+    patterns: ['NRS', 'numeric(?:al)? rating scale']
+  - id: ikdc
+    parent: clinical_score
+    patterns: ['IKDC', 'International Knee Documentation Committee']
+  - id: lysholm
+    parent: clinical_score
+    patterns: ['Lysholm']
+  - id: tegner
+    parent: clinical_score
+    patterns: ['Tegner']
+  - id: mocart
+    parent: cartilage_imaging
+    patterns: ['MOCART', 'magnetic resonance observation of cartilage repair tissue']
+  - id: worms
+    parent: cartilage_imaging
+    patterns: ['WORMS', 'whole[- ]organ magnetic resonance imaging score']
+  - id: t2_mapping
+    parent: cartilage_imaging
+    patterns: ['T2 (?:mapping|relaxation)']
+  - id: cartilage_volume
+    parent: cartilage_imaging
+    patterns: ['cartilage volume']
+  - id: cartilage_imaging
+    parent: structural
+    patterns: ['MRI', 'magnetic resonance imaging', 'cartilage (?:quality|thickness|repair|regeneration)']
+  - id: sf36
+    parent: clinical_score
+    patterns: ['SF-?36', 'SF-?12', 'short[- ]form(?: \(SF\)-?)? ?(?:36|12)']
+  - id: radiography
+    parent: structural
+    patterns: ['radiograph\w*', 'X-?rays?', 'joint space (?:width|narrowing)']
+  - id: kl_grade
+    parent: structural
+    patterns: ['Kellgren[- ]Lawrence', 'K-?L grade']
+  - id: histology
+    parent: structural
+    patterns: ['histolog\w*', 'ICRS(?: II)?', 'biops(?:y|ies)']
+  - id: effusion
+    parent: adverse_events
+    patterns: ['effusions?']
+  - id: swelling
+    parent: adverse_events
+    patterns: ['swelling', 'edema', 'oedema']
+  - id: infection
+    parent: adverse_events
+    patterns: ['infections?', 'septic arthritis']
+  - id: adverse_events
+    patterns: ['adverse (?:events?|effects?|reactions?)', 'complications?', 'safety']
+  - id: pain
+    parent: clinical_score
+    patterns: ['pain']
+  - id: function
+    parent: clinical_score
+    patterns: ['function(?:al)?(?: outcomes?| scores?)?']
+  # families: a sentence may speak of "clinical outcomes" when its claim names
+  # WOMAC, but a structural finding never supports a clinical sentence
+  - id: clinical_score
+    patterns: ['clinical (?:outcomes?|improvement|scores?|results|efficacy|benefit)', 'patient[- ]reported outcomes?', 'PROMs?', 'symptoms?']
+  - id: structural
+    patterns: ['structural (?:outcomes?|repair|improvement|changes?)', 'cartilage (?:structure|morphology)', 'grading scores?']
+
+# Population. The report's default scope is human, knee, osteoarthritis; a
+# claim outside it can't support a sentence inside it.
+species:
+  - id: human
+    patterns: ['patients?', 'participants?', 'humans?', 'subjects?', 'men', 'women', 'adults?']
+  - id: rat
+    patterns: ['rats?']
+  - id: mouse
+    patterns: ['mice', 'mouse', 'murine']
+  - id: rabbit
+    patterns: ['rabbits?']
+  - id: sheep
+    patterns: ['sheep', 'ovine']
+  - id: goat
+    patterns: ['goats?', 'caprine']
+  - id: pig
+    patterns: ['pigs?', 'porcine', 'minipigs?']
+  - id: horse
+    patterns: ['horses?', 'equine']
+  - id: dog
+    patterns: ['dogs?', 'canine']
+
+joint:
+  - id: knee
+    patterns: ['knees?', 'tibiofemoral', 'patellofemoral', 'femoral condyles?', 'genu varum']
+  - id: hip
+    patterns: ['hips?']
+  - id: ankle
+    patterns: ['ankles?', 'talus', 'talar']
+  - id: shoulder
+    patterns: ['shoulders?', 'glenohumeral']
+  - id: hand
+    patterns: ['hands?', 'fingers?', 'thumbs?']
+
+condition:
+  - id: osteoarthritis
+    patterns: ['osteo-?arthrit(?:is|ic)', 'OA', 'gonarthrosis', 'degenerative joint disease']
+  - id: cartilage_defect
+    patterns: ['(?:chondral|cartilage|osteochondral) (?:defects?|lesions?|injur(?:y|ies))']
+  - id: rheumatoid_arthritis
+    patterns: ['rheumatoid arthritis', 'RA']

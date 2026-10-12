@@ -1,0 +1,150 @@
+# Evaluation set for the citation gate.
+#
+# Each case: a claim (a real sentence from a corpus abstract unless marked
+# synthetic), the context its source establishes, a sentence a writer might
+# produce, and whether that sentence may stand on the claim.
+#
+#   expect: pass | reject
+#   rules:  for a reject, the rule(s) that should catch it
+#   kind:   faithful | direction | number | entity | scope | spin | safety
+#   known_gap: true when the gate is NOT designed to catch it. These are
+#              scored separately and published as limitations, never dropped.
+#
+# The default context is an adult human knee OA trial; `context` overrides.
+
+contexts:
+  oa: &oa {species: [human], joint: [knee], condition: [osteoarthritis]}
+
+claims:
+  wakitani: {source: "MED:11869080", context: {<<: *oa, cell_type: [bm_msc]},
+    text: "Although the clinical improvement was not significantly different, the arthroscopic and histological grading score was better in the cell-transplanted group than in the cell-free control group."}
+  wong_ikdc: {source: "MED:24286801", context: {<<: *oa, cell_type: [bm_msc]},
+    text: "The effect of treatment showed an added improvement of 7.65 (95% CI, 3.04 to 12.26; P = .001) for IKDC scores compared with the hyaluronic acid control group."}
+  saw_icrs: {source: "MED:23380230", context: {species: [human], joint: [knee], condition: [cartilage_defect], cell_type: [pb_msc]},
+    text: "The total ICRS II histologic scores for the control group averaged 957 and they averaged 1,066 for the intervention group (P = .022)."}
+  vega: {source: "MED:25822648", context: {<<: *oa, cell_type: [bm_msc]},
+    text: "The MSC-treated patients displayed significant improvement in algofunctional indices versus the active controls treated with hyaluronic acid."}
+  lamo_safe: {source: "MED:27565858", context: {<<: *oa, cell_type: [bm_msc]},
+    text: "No adverse effects were reported after BM-MSC administration or during follow-up."}
+  wang_harm: {source: "MED:29786336", context: {<<: *oa, cell_type: [uc_msc]},
+    text: "After injection, the incidences of pain and swelling in the cell treatment group were significantly higher than those in the control group (χ2=16.200, P=0.000; χ2=11.688, P=0.000), but no significant difference was found in the incidence of effusion (χ2=2.118, P=0.146)."}
+  pers: {source: "MED:28746812", context: {<<: *oa, cell_type: [ad_msc]},
+    text: "An intra-articular injection of autologous AD MSCs improved knee function, as measured with the WOMAC, Knee Society clinical rating system (KSS), and Knee injury and Osteoarthritis Outcome Score (KOOS), and reduced knee pain, as measured with the visual analog scale (VAS), for up to 2 years regardless of the cell dosage."}
+  freitag_pain: {source: "MED:29510712", context: {<<: *oa, cell_type: [ad_msc]},
+    text: "A statistically significant improvement was also seen in WOMAC pain subscale scores from baseline at all timepoints for the PRG combined group while a marginal improvement in the placebo group was not statistically significant."}
+  lamo_vas: {source: "MED:30064455", context: {<<: *oa, cell_type: [bm_msc]},
+    text: "BM-MSCs-administered patients improved according to VAS, median value (IQR) for Control, Low-dose and High-dose groups changed from 5 (3, 7), 7 (5, 8) and 6 (4, 8) to 7 (6, 7), 2 (2, 5) and 3 (3, 4), respectively at the end of follow up (Low-dose vs Control group, p = 0.01; High-dose vs Control group, p = 0.004)."}
+  koos: {source: "MED:28416171", context: {<<: *oa, cell_type: [bm_msc]},
+    text: "At the endpoint at month 12, the KOOS score improved significantly (P<0.05) on the pain subscale (+25.44), activity and daily living subscale (+21.36), quality of life subscale (+28.83), and total KOOS (+18.25)."}
+  orozco: {source: "MED:23680930", context: {<<: *oa, cell_type: [bm_msc]},
+    text: "Patients exhibited rapid and progressive improvement of algofunctional indices that approached 65% to 78% by 1 year."}
+  mocart: {source: "MED:29243283", context: {<<: *oa, cell_type: [msc]},
+    text: "MOCART score showed significant cartilage restoration (from 43 ± 7.2 to 63 ± 17.1), whereas radiography showed neither improvement, nor further joint degeneration."}
+  akgun: {source: "MED:25548122", context: {species: [human], joint: [knee], condition: [cartilage_defect], cell_type: [msc]},
+    text: "At all follow-up intervals, m-AMI demonstrated significantly better functional outcomes (motion deficit and straight leg raise strength) than did m-ACI (p < 0.05)."}
+  rat: {source: synthetic, context: {species: [rat], joint: [knee], condition: [osteoarthritis], cell_type: [bm_msc]},
+    text: "Intra-articular BM-MSC injection reduced cartilage defect area at 8 weeks (p < 0.01)."}
+  hip: {source: synthetic, context: {species: [human], joint: [hip], condition: [osteoarthritis], cell_type: [ad_msc]},
+    text: "Adipose-derived MSC injection improved WOMAC scores at 12 months (p = 0.02)."}
+
+cases:
+  # ── faithful sentences: must pass ──
+  - {claims: [wakitani], expect: pass, kind: faithful,
+     sentence: "Histological grading scores were better with cell transplantation than with cell-free controls, while clinical improvement did not differ significantly."}
+  - {claims: [wong_ikdc], expect: pass, kind: faithful,
+     sentence: "Bone marrow MSCs improved IKDC scores by 7.65 points more than hyaluronic acid (P = .001)."}
+  - {claims: [wong_ikdc], expect: pass, kind: faithful,
+     sentence: "MSC injection added about 7.7 points of IKDC improvement over hyaluronic acid."}
+  - {claims: [vega], expect: pass, kind: faithful,
+     sentence: "Allogeneic bone marrow MSCs improved algofunctional indices significantly more than hyaluronic acid."}
+  - {claims: [lamo_safe], expect: pass, kind: safety,
+     sentence: "No adverse events were reported after BM-MSC injection."}
+  - {claims: [wang_harm], expect: pass, kind: faithful,
+     sentence: "Effusion rates did not differ significantly from controls (P=0.146)."}
+  - {claims: [pers], expect: pass, kind: faithful,
+     sentence: "Autologous adipose-derived MSCs reduced VAS knee pain for up to 2 years."}
+  - {claims: [freitag_pain], expect: pass, kind: faithful,
+     sentence: "WOMAC pain improved significantly from baseline with treatment, while the placebo group's change was not statistically significant."}
+  - {claims: [lamo_vas], expect: pass, kind: faithful,
+     sentence: "High-dose BM-MSCs improved VAS pain versus control (p = 0.004)."}
+  - {claims: [lamo_vas], expect: pass, kind: faithful,
+     sentence: "High-dose BM-MSCs improved VAS pain versus control (p < 0.01)."}
+  - {claims: [koos], expect: pass, kind: faithful,
+     sentence: "KOOS pain improved by 25.44 points at 12 months (P<0.05)."}
+  - {claims: [orozco], expect: pass, kind: faithful,
+     sentence: "Algofunctional indices improved by up to 78% at one year."}
+  - {claims: [mocart], expect: pass, kind: faithful,
+     sentence: "MOCART scores rose from 43 to 63, indicating cartilage restoration."}
+  - {claims: [mocart], expect: pass, kind: faithful,
+     sentence: "Radiography showed no further improvement."}
+
+  # ── direction: wrong way round ──
+  - {claims: [wong_ikdc], expect: reject, rules: [direction], kind: direction,
+     sentence: "MSC injection did not improve IKDC scores more than hyaluronic acid."}
+  - {claims: [vega], expect: reject, rules: [direction], kind: direction,
+     sentence: "MSC-treated patients did not improve more than hyaluronic acid controls."}
+  - {claims: [mocart], expect: reject, rules: [direction], kind: direction,
+     sentence: "Radiography showed improvement after MSC treatment."}
+  - {claims: [wang_harm], expect: reject, rules: [direction], kind: direction,
+     sentence: "Umbilical cord MSC injection reduced post-injection pain and swelling compared with controls."}
+  - {claims: [akgun], expect: reject, rules: [direction, scope], kind: direction,
+     sentence: "Matrix-induced MSC implantation gave functional outcomes similar to chondrocyte implantation."}
+
+  # ── spin: a benefit claimed where the result wasn't significant ──
+  - {claims: [wakitani], expect: reject, rules: [direction], kind: spin,
+     sentence: "Bone marrow cell transplantation improved clinical outcomes compared with controls."}
+  - {claims: [freitag_pain], expect: reject, rules: [direction], kind: spin,
+     sentence: "WOMAC pain improved in the placebo group as well."}
+
+  # ── numbers: changed, invented, or more precise than the source ──
+  - {claims: [wong_ikdc], expect: reject, rules: [numbers], kind: number,
+     sentence: "MSCs improved IKDC scores by 8.65 points more than hyaluronic acid."}
+  - {claims: [wong_ikdc], expect: reject, rules: [numbers], kind: number,
+     sentence: "MSCs improved IKDC scores more than hyaluronic acid (P = .01)."}
+  - {claims: [pers], expect: reject, rules: [numbers], kind: number,
+     sentence: "Autologous adipose-derived MSCs reduced VAS knee pain for up to 3 years."}
+  - {claims: [lamo_vas], expect: reject, rules: [numbers], kind: number,
+     sentence: "High-dose BM-MSCs improved VAS pain versus control (p = 0.001)."}
+  - {claims: [koos], expect: reject, rules: [numbers], kind: number,
+     sentence: "KOOS pain improved by 35.44 points at 12 months."}
+  - {claims: [orozco], expect: reject, rules: [numbers], kind: number,
+     sentence: "Algofunctional indices improved by up to 87% at one year."}
+  - {claims: [orozco], expect: reject, rules: [numbers], kind: number,
+     sentence: "Algofunctional indices improved by up to 78% at two years."}
+
+  # ── entities: wrong cell type, comparator or outcome ──
+  - {claims: [wong_ikdc], expect: reject, rules: [entities], kind: entity,
+     sentence: "Adipose-derived MSCs improved IKDC scores more than hyaluronic acid."}
+  - {claims: [wong_ikdc], expect: reject, rules: [direction, entities], kind: entity,
+     sentence: "MSC injection improved WOMAC scores more than hyaluronic acid."}
+  - {claims: [vega], expect: reject, rules: [entities], kind: entity,
+     sentence: "MSCs improved algofunctional indices significantly more than placebo."}
+  - {claims: [mocart], expect: reject, rules: [direction, entities], kind: entity,
+     sentence: "WORMS scores showed significant cartilage restoration."}
+  - {claims: [pers], expect: reject, rules: [entities], kind: entity,
+     sentence: "Umbilical cord MSCs reduced VAS knee pain for up to 2 years."}
+
+  # ── scope: right finding, wrong population ──
+  - {claims: [rat], expect: reject, rules: [scope], kind: scope,
+     sentence: "BM-MSC injection reduced cartilage defect area at 8 weeks (p < 0.01)."}
+  - {claims: [hip], expect: reject, rules: [scope], kind: scope,
+     sentence: "Adipose-derived MSCs improved WOMAC scores at 12 months (p = 0.02)."}
+  - {claims: [saw_icrs], expect: reject, rules: [scope], kind: scope,
+     sentence: "Peripheral blood stem cells improved ICRS II histology scores (1,066 vs 957; P = .022)."}
+
+  # ── safety ──
+  - {claims: [lamo_safe], expect: reject, rules: [direction], kind: safety,
+     sentence: "BM-MSC injection was associated with adverse events."}
+
+  # ── known gaps: the gate is not designed to catch these ──
+  # Which trial arm a number belongs to is not modeled: the claim contains
+  # p = 0.01 (low dose) and p = 0.004 (high dose), so a sentence that pins the
+  # high-dose p-value's bound on the low-dose arm still finds support.
+  - {claims: [lamo_vas], expect: reject, kind: number, known_gap: true,
+     sentence: "Low-dose BM-MSCs improved VAS pain versus control (p < 0.005)."}
+  # Generalizing one trial's finding to "MSCs" as a class is allowed by the
+  # entity rule (sentence may be more general than its claim). Whether one
+  # trial can carry a class-level sentence is for the writer and the
+  # faithfulness score.
+  - {claims: [pers], expect: reject, kind: entity, known_gap: true,
+     sentence: "Mesenchymal stem cells reduce knee pain for up to 2 years."}

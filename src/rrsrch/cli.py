@@ -5,6 +5,11 @@
   rrsrch corpus verify                     prove local snapshots match the lockfile
   rrsrch corpus status                     what the corpus holds, and what needs review
   rrsrch ledger load                       migrate Postgres and load the corpus
+  rrsrch read plan                         what the reader would send the model (no model needed)
+  rrsrch read run [--source ID] [--limit N] extract claims with the model in RRSRCH_LLM_URL
+  rrsrch read stats                        claims, rejections by rule, coverage
+  rrsrch gate "SENTENCE" CLAIM_ID [...]    check a sentence against ledger claims
+  rrsrch gate-eval                         score the gate on its evaluation set
 """
 from __future__ import annotations
 
@@ -173,6 +178,89 @@ def cmd_ledger_load(args) -> int:
     return 0
 
 
+def cmd_read_plan(args) -> int:
+    from .ledger import db
+    from .reader.extract import chunks
+    with db.connect() as conn:
+        rows = conn.execute("SELECT source_id, part, text FROM documents WHERE part IN ('abstract', 'fulltext') "
+                            "ORDER BY source_id, part").fetchall()
+    total = {"abstract": [0, 0, 0], "fulltext": [0, 0, 0]}   # docs, chunks, chars
+    for sid, part, text in rows:
+        cs = chunks(part, text)
+        t = total[part]
+        t[0] += 1; t[1] += len(cs); t[2] += sum(len(c.text) for c in cs)
+        if args.verbose:
+            print(f"{sid} {part}: {len(cs)} chunk(s), {sum(len(c.text) for c in cs)} of {len(text)} chars")
+    for part, (d, c, ch) in total.items():
+        print(f"{part}: {d} documents -> {c} chunks, {ch:,} characters to read")
+    return 0
+
+
+def cmd_read_run(args) -> int:
+    from .ledger import db
+    from .reader.extract import read_corpus
+    from .reader.llm import LLM
+    llm = LLM.from_env()
+    with db.connect() as conn:
+        db.migrate(conn)
+        rep = read_corpus(conn, llm, args.source or None, args.limit)
+    print(f"read {rep.chunks_read} chunks ({rep.chunks_skipped} already read): "
+          f"{rep.claims} claims in, rejected {rep.rejected}")
+    return 0
+
+
+def cmd_read_stats(args) -> int:
+    from .ledger import db
+    with db.connect() as conn:
+        for extractor, n_items, n_claims in conn.execute(
+                "SELECT extractor, sum(n_items), sum(n_claims) FROM read_chunks GROUP BY 1 ORDER BY 1"):
+            print(f"{extractor}: model proposed {n_items}, ledger accepted {n_claims} "
+                  f"({(n_claims / n_items * 100) if n_items else 0:.0f}%)")
+        for reason, n in conn.execute("SELECT reason, count(*) FROM claim_rejections GROUP BY 1 ORDER BY 2 DESC"):
+            print(f"  rejected {n:>4}  {reason}")
+        n_src, with_claims = conn.execute(
+            "SELECT count(*), count(*) FILTER (WHERE EXISTS (SELECT 1 FROM claims c JOIN documents d "
+            "ON d.id = c.document_id WHERE d.source_id = s.id)) FROM sources s").fetchone()
+        print(f"sources with at least one claim: {with_claims} of {n_src}")
+    return 0
+
+
+def cmd_gate(args) -> int:
+    from .check import gate
+    from .ledger import db
+    with db.connect() as conn:
+        cited = []
+        for cid in args.claims:
+            row = conn.execute(
+                "SELECT c.text, s.title, (SELECT text FROM documents a WHERE a.source_id = s.id "
+                "AND a.part = 'abstract') FROM claims c JOIN documents d ON d.id = c.document_id "
+                "JOIN sources s ON s.id = d.source_id WHERE c.id = %s", (int(cid),)).fetchone()
+            if row is None:
+                print(f"no claim {cid}", file=sys.stderr)
+                return 2
+            cited.append(gate.CitedClaim(cid, row[0], gate.source_context(row[1], row[2] or "")))
+    v = gate.check(args.sentence, cited)
+    for rule, ok, detail in v.log:
+        print(f"  {'ok  ' if ok else 'FAIL'} {rule:<10} {detail}")
+    print("PASS" if v.passed else f"REJECTED by {v.rule}")
+    return 0 if v.passed else 1
+
+
+def cmd_gate_eval(args) -> int:
+    from .check import evaluate
+    score = evaluate.run()
+    for r in score.results:
+        if not r.correct or args.verbose:
+            tag = "gap " if r.case.get("known_gap") else ("ok  " if r.correct else "MISS")
+            print(f"{tag} {r.case['kind']:<9} want {r.case['expect']:<6} got {r.verdict.rule:<10} "
+                  f"{r.case['sentence'][:70]}")
+    s = score.summary()
+    print(f"unfaithful sentences caught: {s['caught']}; faithful sentences refused: {s['false_rejects']}; "
+          f"known gaps caught: {s['known_gaps_caught']}")
+    misses = [r for r in score.results if not r.correct and not r.case.get("known_gap")]
+    return 1 if misses else 0
+
+
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(prog="rrsrch")
     sub = p.add_subparsers(dest="group", required=True)
@@ -188,6 +276,22 @@ def main(argv: list[str] | None = None) -> int:
     corpus.add_parser("status").set_defaults(fn=cmd_status)
     ledger = sub.add_parser("ledger").add_subparsers(dest="cmd", required=True)
     ledger.add_parser("load").set_defaults(fn=cmd_ledger_load)
+    read = sub.add_parser("read").add_subparsers(dest="cmd", required=True)
+    rp = read.add_parser("plan", help="what the reader would send the model")
+    rp.add_argument("-v", "--verbose", action="store_true")
+    rp.set_defaults(fn=cmd_read_plan)
+    rr = read.add_parser("run", help="extract claims with the configured model")
+    rr.add_argument("--source", action="append", help="only this source id (repeatable)")
+    rr.add_argument("--limit", type=int, help="only the first N sources")
+    rr.set_defaults(fn=cmd_read_run)
+    read.add_parser("stats").set_defaults(fn=cmd_read_stats)
+    g = sub.add_parser("gate", help="check a sentence against ledger claims")
+    g.add_argument("sentence")
+    g.add_argument("claims", nargs="+", metavar="CLAIM_ID")
+    g.set_defaults(fn=cmd_gate)
+    ge = sub.add_parser("gate-eval", help="score the gate on its evaluation set")
+    ge.add_argument("-v", "--verbose", action="store_true")
+    ge.set_defaults(fn=cmd_gate_eval)
     args = p.parse_args(argv)
     return args.fn(args)
 
