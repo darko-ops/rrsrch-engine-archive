@@ -1,0 +1,614 @@
+{
+ "data/snapshots/ctgov/NCT01041001.json": {
+  "sha256": "c4ab9da058f700ccce048e0c12edbc25cd09256ab682b127f0bd927a1f7784cf",
+  "bytes": 12232,
+  "url": "ctgov:NCT01041001",
+  "fetched_at": "2026-10-12T22:21:29+00:00"
+ },
+ "data/snapshots/ctgov/NCT01300598.json": {
+  "sha256": "635aeb40b16d846b2635c6e288f22440c0454c18101ab529c746097f8bbdb4da",
+  "bytes": 8871,
+  "url": "ctgov:NCT01300598",
+  "fetched_at": "2026-10-12T22:21:29+00:00"
+ },
+ "data/snapshots/ctgov/NCT01453738.json": {
+  "sha256": "002537a94039971de003f7ba3fbaa9c5d4725cc3c38c9e2706e3698ddc972171",
+  "bytes": 9885,
+  "url": "ctgov:NCT01453738",
+  "fetched_at": "2026-10-12T22:21:29+00:00"
+ },
+ "data/snapshots/ctgov/NCT01485198.json": {
+  "sha256": "c97138f1cbfd0f0432ea12948a86039e38abc812f1c9cadd766a6d13b8e4ebda",
+  "bytes": 8825,
+  "url": "ctgov:NCT01485198",
+  "fetched_at": "2026-10-12T22:21:30+00:00"
+ },
+ "data/snapshots/ctgov/NCT01626677.json": {
+  "sha256": "a57aca67d5177cf09ba2ce7589b62464ce2c79854c27e3f23450cf3cb054e0d5",
+  "bytes": 11254,
+  "url": "ctgov:NCT01626677",
+  "fetched_at": "2026-10-12T22:21:30+00:00"
+ },
+ "data/snapshots/ctgov/NCT01873625.json": {
+  "sha256": "95004cb65f47dcb1bcfaaf3b76d9e66d70c0f9628cc5f9e178ef8ae34827909d",
+  "bytes": 7736,
+  "url": "ctgov:NCT01873625",
+  "fetched_at": "2026-10-12T22:21:30+00:00"
+ },
+ "data/snapshots/ctgov/NCT02123368.json": {
+  "sha256": "5f3136c6ed72fe2bfeb3d86f48abd3e8f78b7715ce8fd899e328f9c0c55ee4de",
+  "bytes": 18749,
+  "url": "ctgov:NCT02123368",
+  "fetched_at": "2026-10-12T22:21:30+00:00"
+ },
+ "data/snapshots/ctgov/NCT02162693.json": {
+  "sha256": "a81762ee2e51bbceb2756072e849126be46dc32b6e89948070548e3503d574f9",
+  "bytes": 7852,
+  "url": "ctgov:NCT02162693",
+  "fetched_at": "2026-10-12T22:21:30+00:00"
+ },
+ "data/snapshots/ctgov/NCT02351011.json": {
+  "sha256": "b65cc52cc322b5d3f82d4de294cfb2f2d5c7b2a1be2ad25c109915ab0cc990a1",
+  "bytes": 10276,
+  "url": "ctgov:NCT02351011",
+  "fetched_at": "2026-10-12T22:21:30+00:00"
+ },
+ "data/snapshots/ctgov/NCT02365142.json": {
+  "sha256": "7f8243d531b35763e5a3bf1995306dba97f33a4059d3954b7a4e9bd320617afb",
+  "bytes": 13008,
+  "url": "ctgov:NCT02365142",
+  "fetched_at": "2026-10-12T22:21:31+00:00"
+ },
+ "data/snapshots/ctgov/NCT02580695.json": {
+  "sha256": "4679aa673d3ee06c3bb6f050e72c6a6a27de9e1fba91a43a5e3c21e33a1b5032",
+  "bytes": 6602,
+  "url": "ctgov:NCT02580695",
+  "fetched_at": "2026-10-12T22:21:31+00:00"
+ },
+ "data/snapshots/ctgov/NCT02641860.json": {
+  "sha256": "d2f17681d9d8c2036b0e6bb3db26ca675027998dc8fa9ccceb072b5a481c9b2e",
+  "bytes": 7986,
+  "url": "ctgov:NCT02641860",
+  "fetched_at": "2026-10-12T22:21:31+00:00"
+ },
+ "data/snapshots/ctgov/NCT02658344.json": {
+  "sha256": "6b07434ac1a287b572d20bd77b24259fea4f52f090e7c7818b57f9c8792d6d41",
+  "bytes": 11327,
+  "url": "ctgov:NCT02658344",
+  "fetched_at": "2026-10-12T22:21:31+00:00"
+ },
+ "data/snapshots/ctgov/NCT02726945.json": {
+  "sha256": "e2ce60b27089a2543d9868cd154b0e02d0b999c5f8108f1df30f759a403fa63d",
+  "bytes": 22899,
+  "url": "ctgov:NCT02726945",
+  "fetched_at": "2026-10-12T22:21:31+00:00"
+ },
+ "data/snapshots/ctgov/NCT02784964.json": {
+  "sha256": "3a550aa341e089cfa6c115f3a3ef760912fadb44a4ea0d5861100ba71a7b0e32",
+  "bytes": 9386,
+  "url": "ctgov:NCT02784964",
+  "fetched_at": "2026-10-12T22:21:31+00:00"
+ },
+ "data/snapshots/ctgov/NCT03000712.json": {
+  "sha256": "bc27f8de627e6536a9d55d4f3e9a6a15d08023374d547c1e4818f24bd1363d36",
+  "bytes": 10113,
+  "url": "ctgov:NCT03000712",
+  "fetched_at": "2026-10-12T22:21:31+00:00"
+ },
+ "data/snapshots/ctgov/NCT03818737.json": {
+  "sha256": "3d0e1e254c41d94d43f7c8f7a71942c9fa73cf9a2e8f5bb6085e78ae7887405e",
+  "bytes": 88369,
+  "url": "ctgov:NCT03818737",
+  "fetched_at": "2026-10-12T22:21:32+00:00"
+ },
+ "data/snapshots/ctgov/NCT03990805.json": {
+  "sha256": "fead21c3dd281972dd02aded777775dab1add53afcc3e1d0b78fcb324ddaabf5",
+  "bytes": 16272,
+  "url": "ctgov:NCT03990805",
+  "fetched_at": "2026-10-12T22:21:32+00:00"
+ },
+ "data/snapshots/ctgov/NCT04240873.json": {
+  "sha256": "35ec503076a52dc05b029c54dc6e93f9c2469679ec6b01aaae06435220d88e98",
+  "bytes": 10312,
+  "url": "ctgov:NCT04240873",
+  "fetched_at": "2026-10-12T22:21:32+00:00"
+ },
+ "data/snapshots/europepmc/MED_11869080/record.json": {
+  "sha256": "dfaf63c03ad46f833f7075288338097d50567534138cb582ff79269934074372",
+  "bytes": 6233,
+  "url": "europepmc:MED:11869080",
+  "fetched_at": "2026-10-12T22:20:44+00:00"
+ },
+ "data/snapshots/europepmc/MED_21510531/record.json": {
+  "sha256": "d207fba6d9d39e6581e491d8b9c5cc723bdb48181bcde2b9501569fdfd601c4c",
+  "bytes": 4740,
+  "url": "europepmc:MED:21510531",
+  "fetched_at": "2026-10-12T22:20:45+00:00"
+ },
+ "data/snapshots/europepmc/MED_23235728/record.json": {
+  "sha256": "234482fbe2db859567056f3bc2f316e411604d457bec46689b60adebb4060325",
+  "bytes": 7286,
+  "url": "europepmc:MED:23235728",
+  "fetched_at": "2026-10-12T22:20:45+00:00"
+ },
+ "data/snapshots/europepmc/MED_23380230/record.json": {
+  "sha256": "892d29ac54f965660ceab9ec231b4c1d2184d7ecee912c47fc089a01de8d90a1",
+  "bytes": 9299,
+  "url": "europepmc:MED:23380230",
+  "fetched_at": "2026-10-12T22:20:45+00:00"
+ },
+ "data/snapshots/europepmc/MED_23680930/record.json": {
+  "sha256": "4f46da151739d20f3522a0cd1d56c86c31e5ba52deccb05973e2d0144f4267d7",
+  "bytes": 7547,
+  "url": "europepmc:MED:23680930",
+  "fetched_at": "2026-10-12T22:20:45+00:00"
+ },
+ "data/snapshots/europepmc/MED_24286801/record.json": {
+  "sha256": "baafd17128a2ba3952651219e1fe1cf4c5b8d2d0ce71b5f589f12f47ef447c24",
+  "bytes": 9443,
+  "url": "europepmc:MED:24286801",
+  "fetched_at": "2026-10-12T22:20:45+00:00"
+ },
+ "data/snapshots/europepmc/MED_24430407/record.json": {
+  "sha256": "d99e238f5cb92e7846f5a9704df5369b3cb7f54e5606421395e2d9129649f984",
+  "bytes": 10607,
+  "url": "europepmc:MED:24430407",
+  "fetched_at": "2026-10-12T22:20:46+00:00"
+ },
+ "data/snapshots/europepmc/MED_25548122/record.json": {
+  "sha256": "758af2d6d0380dd82cfc17d83affb1a61fceb7de01b7da76815d04cea982127a",
+  "bytes": 10789,
+  "url": "europepmc:MED:25548122",
+  "fetched_at": "2026-10-12T22:20:46+00:00"
+ },
+ "data/snapshots/europepmc/MED_25822648/record.json": {
+  "sha256": "75893f57f8b21539c478ea23dd35bf8f4785c8d4ef86bb21ce2ffc56061921ba",
+  "bytes": 10259,
+  "url": "europepmc:MED:25822648",
+  "fetched_at": "2026-10-12T22:20:46+00:00"
+ },
+ "data/snapshots/europepmc/MED_27217345/record.json": {
+  "sha256": "f220f323c05672e7e9b0f7f105a56b2f16e78c28f406973c73e521ffb342dc0f",
+  "bytes": 15439,
+  "url": "europepmc:MED:27217345",
+  "fetched_at": "2026-10-12T22:20:46+00:00"
+ },
+ "data/snapshots/europepmc/MED_27565858/fulltext.xml": {
+  "sha256": "e7c1ca61babed00d5f849241ddc49c30b1140d77fc7663f231fd9dda4755a686",
+  "bytes": 110473,
+  "url": "europepmc:PMC5002157/fullTextXML",
+  "fetched_at": "2026-10-12T22:20:48+00:00"
+ },
+ "data/snapshots/europepmc/MED_27565858/record.json": {
+  "sha256": "fb944867e43ed820daa2d3cfe551a89a9e89e5b19257661626af4960e264dbae",
+  "bytes": 17404,
+  "url": "europepmc:MED:27565858",
+  "fetched_at": "2026-10-12T22:20:46+00:00"
+ },
+ "data/snapshots/europepmc/MED_27993154/fulltext.xml": {
+  "sha256": "84044c4d999fb521b60def30912dc7e8fa0cbaae09818e13f94dd351969fe54f",
+  "bytes": 162927,
+  "url": "europepmc:PMC5168586/fullTextXML",
+  "fetched_at": "2026-10-12T22:20:51+00:00"
+ },
+ "data/snapshots/europepmc/MED_27993154/record.json": {
+  "sha256": "acefb53f83da799d9ac67910f4682a5149c291339c6cbb8cca184cb9e5c18be4",
+  "bytes": 12929,
+  "url": "europepmc:MED:27993154",
+  "fetched_at": "2026-10-12T22:20:48+00:00"
+ },
+ "data/snapshots/europepmc/MED_28416171/record.json": {
+  "sha256": "8100f279be32a78a3c715b51eb95dc7e2e33f996c7ae9f2bcf053f1195828756",
+  "bytes": 11843,
+  "url": "europepmc:MED:28416171",
+  "fetched_at": "2026-10-12T22:20:51+00:00"
+ },
+ "data/snapshots/europepmc/MED_28746812/record.json": {
+  "sha256": "13e72bca87d82bbb0d208a96848b6cef20a8bb5239073146c194b767fc3f4ad5",
+  "bytes": 9432,
+  "url": "europepmc:MED:28746812",
+  "fetched_at": "2026-10-12T22:20:51+00:00"
+ },
+ "data/snapshots/europepmc/MED_28752679/record.json": {
+  "sha256": "ce2fc4c52f2fe6110f3f17d6d3a01fa85dac1594b5c3f487a855b9c34fa56cec",
+  "bytes": 12216,
+  "url": "europepmc:MED:28752679",
+  "fetched_at": "2026-10-12T22:20:51+00:00"
+ },
+ "data/snapshots/europepmc/MED_29243283/record.json": {
+  "sha256": "00f1884d28750cab7e72e7d00c2b025c4b4543e65760d9fd58190b59f15ccbde",
+  "bytes": 8962,
+  "url": "europepmc:MED:29243283",
+  "fetched_at": "2026-10-12T22:20:51+00:00"
+ },
+ "data/snapshots/europepmc/MED_29428486/record.json": {
+  "sha256": "80f77c51ea6f555709ee28efc5dc8cadd4a74cd558d9e972926750ff0d6128c4",
+  "bytes": 14053,
+  "url": "europepmc:MED:29428486",
+  "fetched_at": "2026-10-12T22:20:52+00:00"
+ },
+ "data/snapshots/europepmc/MED_29510712/fulltext.xml": {
+  "sha256": "6dd3d0433108ac19bf130568bf4c3f9313d25169dd7e37258735632a0cea65c0",
+  "bytes": 119767,
+  "url": "europepmc:PMC5840781/fullTextXML",
+  "fetched_at": "2026-10-12T22:20:53+00:00"
+ },
+ "data/snapshots/europepmc/MED_29510712/record.json": {
+  "sha256": "bde432ea6c6ec467a66a561f3588dd64bbf486dfcacf0613ee8671ca0088ebd1",
+  "bytes": 12853,
+  "url": "europepmc:MED:29510712",
+  "fetched_at": "2026-10-12T22:20:52+00:00"
+ },
+ "data/snapshots/europepmc/MED_29786336/record.json": {
+  "sha256": "359e575a7d22752f952b742e7a2c43208771e0c833047063bd37e28a5ca0eff5",
+  "bytes": 8516,
+  "url": "europepmc:MED:29786336",
+  "fetched_at": "2026-10-12T22:20:53+00:00"
+ },
+ "data/snapshots/europepmc/MED_30064455/fulltext.xml": {
+  "sha256": "f7e9b03a954051b7dc9c061838c496c4d1a3cd5f5c2e3ff88b49c97587710895",
+  "bytes": 37538,
+  "url": "europepmc:PMC6069715/fullTextXML",
+  "fetched_at": "2026-10-12T22:20:54+00:00"
+ },
+ "data/snapshots/europepmc/MED_30064455/record.json": {
+  "sha256": "c28d86b7f1771ab6021ded03683f4367cc8890434800ca07605ad175454a20cd",
+  "bytes": 14660,
+  "url": "europepmc:MED:30064455",
+  "fetched_at": "2026-10-12T22:20:53+00:00"
+ },
+ "data/snapshots/europepmc/MED_30109404/record.json": {
+  "sha256": "a756025413747ed6d574340f5f3f977b699f62dd4d57c609697f6f5434fbc63f",
+  "bytes": 10856,
+  "url": "europepmc:MED:30109404",
+  "fetched_at": "2026-10-12T22:20:54+00:00"
+ },
+ "data/snapshots/europepmc/MED_30318332/record.json": {
+  "sha256": "cd3db635faa94d2a902bf01dcded392f5c1fb793374edd2e5ae303621e4022cc",
+  "bytes": 10765,
+  "url": "europepmc:MED:30318332",
+  "fetched_at": "2026-10-12T22:20:54+00:00"
+ },
+ "data/snapshots/europepmc/MED_30522806/record.json": {
+  "sha256": "d2120cebb644123a84e6804e3c8e59749052051968738d9c8752183243b1165e",
+  "bytes": 10786,
+  "url": "europepmc:MED:30522806",
+  "fetched_at": "2026-10-12T22:20:54+00:00"
+ },
+ "data/snapshots/europepmc/MED_30592390/fulltext.xml": {
+  "sha256": "9be56cbb1b0c59e1b142d810e0cbc159a3d0c1f5ffdb63e784b9a39573884ab6",
+  "bytes": 135347,
+  "url": "europepmc:PMC6392367/fullTextXML",
+  "fetched_at": "2026-10-12T22:20:56+00:00"
+ },
+ "data/snapshots/europepmc/MED_30592390/record.json": {
+  "sha256": "6081a9d3c3eaacce4c434fcd2ddac5297c14cf3c19c44bfc5eb7428234449478",
+  "bytes": 13841,
+  "url": "europepmc:MED:30592390",
+  "fetched_at": "2026-10-12T22:20:55+00:00"
+ },
+ "data/snapshots/europepmc/MED_30762487/record.json": {
+  "sha256": "6af33fbfaa60bdbf9d4116f3ea215c25d3808ffbd4ff6f2919ffb86cf6efe72f",
+  "bytes": 8599,
+  "url": "europepmc:MED:30762487",
+  "fetched_at": "2026-10-12T22:20:56+00:00"
+ },
+ "data/snapshots/europepmc/MED_30835956/fulltext.xml": {
+  "sha256": "ae4b02280a25d834672dbbdfe38b3c6101b025ec5e3d161a196d5c9581ea7a42",
+  "bytes": 94461,
+  "url": "europepmc:PMC6525553/fullTextXML",
+  "fetched_at": "2026-10-12T22:20:58+00:00"
+ },
+ "data/snapshots/europepmc/MED_30835956/record.json": {
+  "sha256": "33430d5417f5db4d2190f55868660f7c0ac44a38bcef86462de8ef96ca6db919",
+  "bytes": 9925,
+  "url": "europepmc:MED:30835956",
+  "fetched_at": "2026-10-12T22:20:56+00:00"
+ },
+ "data/snapshots/europepmc/MED_30964245/fulltext.xml": {
+  "sha256": "df4dd93a00584748bf3f03c3023d2e743e4cded1ed6adb08be41a37650acfc55",
+  "bytes": 139400,
+  "url": "europepmc:PMC6646697/fullTextXML",
+  "fetched_at": "2026-10-12T22:20:59+00:00"
+ },
+ "data/snapshots/europepmc/MED_30964245/record.json": {
+  "sha256": "7614085707edb64c7e3dfdf487ee10ebb9102820557528963cbf3c8741cfcaac",
+  "bytes": 18686,
+  "url": "europepmc:MED:30964245",
+  "fetched_at": "2026-10-12T22:20:58+00:00"
+ },
+ "data/snapshots/europepmc/MED_30987218/fulltext.xml": {
+  "sha256": "60af45a7bcb56c7aa5479840883d68e18a85f678bab7a5f5f80f20af29fd7646",
+  "bytes": 138701,
+  "url": "europepmc:PMC6523621/fullTextXML",
+  "fetched_at": "2026-10-12T22:20:59+00:00"
+ },
+ "data/snapshots/europepmc/MED_30987218/record.json": {
+  "sha256": "83a8198a82852b878aa204c5c1cd9a1d12801fd6a0570858d714b514d6f6eaab",
+  "bytes": 11118,
+  "url": "europepmc:MED:30987218",
+  "fetched_at": "2026-10-12T22:20:59+00:00"
+ },
+ "data/snapshots/europepmc/MED_31113476/fulltext.xml": {
+  "sha256": "618566c39a755409b65adb3e6a908962ff7dd79ab34a597f4ac62d0bd7c0086f",
+  "bytes": 84389,
+  "url": "europepmc:PMC6528322/fullTextXML",
+  "fetched_at": "2026-10-12T22:21:01+00:00"
+ },
+ "data/snapshots/europepmc/MED_31113476/record.json": {
+  "sha256": "557d596409973d02f96499abbf93d123f00eb7a4bc113fd5c90bc7d482f2fff4",
+  "bytes": 12518,
+  "url": "europepmc:MED:31113476",
+  "fetched_at": "2026-10-12T22:20:59+00:00"
+ },
+ "data/snapshots/europepmc/MED_31312692/fulltext.xml": {
+  "sha256": "446ae84dd2674fbe2cb1852d45f2fa1f67fc630ea5a7f1e47c995cc56895a6e0",
+  "bytes": 99318,
+  "url": "europepmc:PMC6610227/fullTextXML",
+  "fetched_at": "2026-10-12T22:21:01+00:00"
+ },
+ "data/snapshots/europepmc/MED_31312692/record.json": {
+  "sha256": "7eebdaa0cce9e7cab79bbd0d6cb51e796c420b0e38adbfaf20dcb02fad1d7f42",
+  "bytes": 12244,
+  "url": "europepmc:MED:31312692",
+  "fetched_at": "2026-10-12T22:21:01+00:00"
+ },
+ "data/snapshots/europepmc/MED_31373830/record.json": {
+  "sha256": "e8c27c122d994e5d27bf6fa5482df1c06d639584b36601797fdfbb7b10fffeef",
+  "bytes": 9737,
+  "url": "europepmc:MED:31373830",
+  "fetched_at": "2026-10-12T22:21:02+00:00"
+ },
+ "data/snapshots/europepmc/MED_31587091/record.json": {
+  "sha256": "a242aed94f1c6c5b3c65f0f7ce8614c6a4293fc2e297c6c0c25184f87175c7df",
+  "bytes": 13583,
+  "url": "europepmc:MED:31587091",
+  "fetched_at": "2026-10-12T22:21:02+00:00"
+ },
+ "data/snapshots/europepmc/MED_31639063/fulltext.xml": {
+  "sha256": "5158c29da15f4f839e37c78c49c0b66eb1daf7c42f936ce6d3eb11e3bf65fe97",
+  "bytes": 154995,
+  "url": "europepmc:PMC6805685/fullTextXML",
+  "fetched_at": "2026-10-12T22:21:03+00:00"
+ },
+ "data/snapshots/europepmc/MED_31639063/record.json": {
+  "sha256": "4ca9751a6b2cd01d15d12b8e0987a4ecd5c2319639582253ae5563565e63aeeb",
+  "bytes": 11181,
+  "url": "europepmc:MED:31639063",
+  "fetched_at": "2026-10-12T22:21:02+00:00"
+ },
+ "data/snapshots/europepmc/MED_31980879/record.json": {
+  "sha256": "ba6dcbec9820474e8c44ae9ec8735e2f89c3276c080ae83fc610da4c1e67d0ca",
+  "bytes": 7436,
+  "url": "europepmc:MED:31980879",
+  "fetched_at": "2026-10-12T22:21:03+00:00"
+ },
+ "data/snapshots/europepmc/MED_32109160/record.json": {
+  "sha256": "ed8f99b9cb9158bd32aad06c3b024f2832a210ddcffc74e13d6b0a8063a553d7",
+  "bytes": 8442,
+  "url": "europepmc:MED:32109160",
+  "fetched_at": "2026-10-12T22:21:03+00:00"
+ },
+ "data/snapshots/europepmc/MED_32677876/record.json": {
+  "sha256": "9a2658f989fa826064d7681a8cc777b06baba466de380f6e4689a0fc83cd122f",
+  "bytes": 10165,
+  "url": "europepmc:MED:32677876",
+  "fetched_at": "2026-10-12T22:21:03+00:00"
+ },
+ "data/snapshots/europepmc/MED_32948200/fulltext.xml": {
+  "sha256": "3eeb36cbef2c40a39ddee7869a3eef2b707b0831d2b0826325737d58d00386e8",
+  "bytes": 108695,
+  "url": "europepmc:PMC7501623/fullTextXML",
+  "fetched_at": "2026-10-12T22:21:06+00:00"
+ },
+ "data/snapshots/europepmc/MED_32948200/record.json": {
+  "sha256": "e48def9aae0bb6082e6b48b83e33d23ae7789d89626598ec8614866da33b3e00",
+  "bytes": 15041,
+  "url": "europepmc:MED:32948200",
+  "fetched_at": "2026-10-12T22:21:03+00:00"
+ },
+ "data/snapshots/europepmc/MED_33407686/fulltext.xml": {
+  "sha256": "7d27bcbad60b284ed079ab4444426163e6fa31a65d02cb520fb5a7f6feee7218",
+  "bytes": 105315,
+  "url": "europepmc:PMC7789676/fullTextXML",
+  "fetched_at": "2026-10-12T22:21:19+00:00"
+ },
+ "data/snapshots/europepmc/MED_33407686/record.json": {
+  "sha256": "d6f5542408fedb311f4f8cd0ff7cced474d39f552581eef8613d5847acc34a89",
+  "bytes": 6367,
+  "url": "europepmc:MED:33407686",
+  "fetched_at": "2026-10-12T22:21:19+00:00"
+ },
+ "data/snapshots/europepmc/MED_33490296/fulltext.xml": {
+  "sha256": "980ab13abf36a10d617e821a6bb3cacbcc77309518f6205113c6a8bee68cbb46",
+  "bytes": 159114,
+  "url": "europepmc:PMC7809531/fullTextXML",
+  "fetched_at": "2026-10-12T22:21:09+00:00"
+ },
+ "data/snapshots/europepmc/MED_33490296/record.json": {
+  "sha256": "faf792d470da0cddacbae9badb269684206ac2d4d846bd7ca2ee2ebb61b88941",
+  "bytes": 15418,
+  "url": "europepmc:MED:33490296",
+  "fetched_at": "2026-10-12T22:21:06+00:00"
+ },
+ "data/snapshots/europepmc/MED_34717765/fulltext.xml": {
+  "sha256": "0b1ce9502808d422dab38efc99d214f8b6172f369bd3638da025493b511f50c7",
+  "bytes": 141933,
+  "url": "europepmc:PMC8557559/fullTextXML",
+  "fetched_at": "2026-10-12T22:21:10+00:00"
+ },
+ "data/snapshots/europepmc/MED_34717765/record.json": {
+  "sha256": "e98f937408f97a592d2bb3fbf92b80f278cd74dee70cfebfc493ee56c2f12612",
+  "bytes": 10617,
+  "url": "europepmc:MED:34717765",
+  "fetched_at": "2026-10-12T22:21:09+00:00"
+ },
+ "data/snapshots/europepmc/MED_34845428/fulltext.xml": {
+  "sha256": "1d177ce4517d4250675e719c49e85ea5acbb4c283db5525e44856cb30f2c073d",
+  "bytes": 67793,
+  "url": "europepmc:PMC8627347/fullTextXML",
+  "fetched_at": "2026-10-12T22:21:11+00:00"
+ },
+ "data/snapshots/europepmc/MED_34845428/record.json": {
+  "sha256": "f073b219c81ae57b2becc9a0d1d77678502d3f74cdd58bbf36e10103b529e258",
+  "bytes": 7910,
+  "url": "europepmc:MED:34845428",
+  "fetched_at": "2026-10-12T22:21:10+00:00"
+ },
+ "data/snapshots/europepmc/MED_35674255/fulltext.xml": {
+  "sha256": "b0c9525c06fba7f3bae6d8dabeee2607117a23f6f258f19f0d2aabb0664c42be",
+  "bytes": 160186,
+  "url": "europepmc:PMC9216209/fullTextXML",
+  "fetched_at": "2026-10-12T22:21:13+00:00"
+ },
+ "data/snapshots/europepmc/MED_35674255/record.json": {
+  "sha256": "304170e5749750e0ad90514da80ee03e081e9a9dc99e2889cb8fd4a50337c544",
+  "bytes": 9111,
+  "url": "europepmc:MED:35674255",
+  "fetched_at": "2026-10-12T22:21:11+00:00"
+ },
+ "data/snapshots/europepmc/MED_36262962/fulltext.xml": {
+  "sha256": "2dec3ba6c84e037170b4497ad732eaf4cebac68c0efc81357667e3285285d802",
+  "bytes": 111086,
+  "url": "europepmc:PMC9550852/fullTextXML",
+  "fetched_at": "2026-10-12T22:21:14+00:00"
+ },
+ "data/snapshots/europepmc/MED_36262962/record.json": {
+  "sha256": "5b572a724ae38f0f57c9cad8f9103c0b34d80438f79e83e82dbbf3c5b146807f",
+  "bytes": 8106,
+  "url": "europepmc:MED:36262962",
+  "fetched_at": "2026-10-12T22:21:13+00:00"
+ },
+ "data/snapshots/europepmc/MED_36601089/fulltext.xml": {
+  "sha256": "6c4c5764dd8a5b49b549dac193d3b9380c19b290e247c7ac4977d5103b02242e",
+  "bytes": 104100,
+  "url": "europepmc:PMC9806366/fullTextXML",
+  "fetched_at": "2026-10-12T22:21:20+00:00"
+ },
+ "data/snapshots/europepmc/MED_36601089/record.json": {
+  "sha256": "85a817cd3420c5d0dcd6bfd8a99345a0030edaf5267d7b619a062bd28a035c9f",
+  "bytes": 8159,
+  "url": "europepmc:MED:36601089",
+  "fetched_at": "2026-10-12T22:21:19+00:00"
+ },
+ "data/snapshots/europepmc/MED_37316949/fulltext.xml": {
+  "sha256": "203179d66f19499fef6edd332988412b4e1a485592393a0663a80ed410fa29f0",
+  "bytes": 195174,
+  "url": "europepmc:PMC10268462/fullTextXML",
+  "fetched_at": "2026-10-12T22:21:15+00:00"
+ },
+ "data/snapshots/europepmc/MED_37316949/record.json": {
+  "sha256": "8e5ba669900cb0775f78c718a5f1896374e699e2264065611b570c40ba6aa2f9",
+  "bytes": 12654,
+  "url": "europepmc:MED:37316949",
+  "fetched_at": "2026-10-12T22:21:14+00:00"
+ },
+ "data/snapshots/europepmc/MED_37345256/record.json": {
+  "sha256": "8729a0ffeaa65846bf319a0c26ee791bc6f7cb7f59db13cb5e42e186400c587a",
+  "bytes": 13216,
+  "url": "europepmc:MED:37345256",
+  "fetched_at": "2026-10-12T22:21:15+00:00"
+ },
+ "data/snapshots/europepmc/MED_37366164/record.json": {
+  "sha256": "950f2df37ee24bc9b84cf40deb23d53d6b13d5c4718ee602cd9ec57d0b816cae",
+  "bytes": 16858,
+  "url": "europepmc:MED:37366164",
+  "fetched_at": "2026-10-12T22:21:15+00:00"
+ },
+ "data/snapshots/europepmc/MED_39360004/fulltext.xml": {
+  "sha256": "0a3681ab3a3df8420653f3545a22e634a5a8e53a705918aa20256a7ff9fb1495",
+  "bytes": 211700,
+  "url": "europepmc:PMC11445595/fullTextXML",
+  "fetched_at": "2026-10-12T22:21:24+00:00"
+ },
+ "data/snapshots/europepmc/MED_39360004/record.json": {
+  "sha256": "a5d4791a7c52a9ceba5fddec6f12435d7d0c706f6a8450e2c83fee6c2d3cd705",
+  "bytes": 9811,
+  "url": "europepmc:MED:39360004",
+  "fetched_at": "2026-10-12T22:21:20+00:00"
+ },
+ "data/snapshots/europepmc/MED_39629035/fulltext.xml": {
+  "sha256": "2f39407c0a72914d70694568f7e258c6cfdd4c250cf73d49c38a3d4a9d915eb7",
+  "bytes": 127586,
+  "url": "europepmc:PMC11613985/fullTextXML",
+  "fetched_at": "2026-10-12T22:21:24+00:00"
+ },
+ "data/snapshots/europepmc/MED_39629035/record.json": {
+  "sha256": "310a8aa93dd2ef48e2d50b1515fb509773f18de04b9d8fceaa15c51d5106a4eb",
+  "bytes": 5470,
+  "url": "europepmc:MED:39629035",
+  "fetched_at": "2026-10-12T22:21:24+00:00"
+ },
+ "data/snapshots/europepmc/MED_39874108/fulltext.xml": {
+  "sha256": "a11a188649ce1bad206c909533a41c0e58d6c492bed58f7f864e65a42541338b",
+  "bytes": 98599,
+  "url": "europepmc:PMC11775978/fullTextXML",
+  "fetched_at": "2026-10-12T22:21:18+00:00"
+ },
+ "data/snapshots/europepmc/MED_39874108/record.json": {
+  "sha256": "213f123359266349667f3dde2a715966122a096be3632460ed2e2b87d587c162",
+  "bytes": 8922,
+  "url": "europepmc:MED:39874108",
+  "fetched_at": "2026-10-12T22:21:15+00:00"
+ },
+ "data/snapshots/europepmc/MED_40055739/fulltext.xml": {
+  "sha256": "0e6622ee621dff392a64c649b2f4997c0991568235e3dd06b25bc46cd07cae32",
+  "bytes": 132872,
+  "url": "europepmc:PMC11887158/fullTextXML",
+  "fetched_at": "2026-10-12T22:21:25+00:00"
+ },
+ "data/snapshots/europepmc/MED_40055739/record.json": {
+  "sha256": "eab66dbd89d6a835c3a4b2bf2484d563e157a3bb2c6fffaa9ef0a0b041737f1e",
+  "bytes": 17595,
+  "url": "europepmc:MED:40055739",
+  "fetched_at": "2026-10-12T22:21:24+00:00"
+ },
+ "data/snapshots/europepmc/MED_40407910/fulltext.xml": {
+  "sha256": "e3267d723ada693d026b2972ccd8d9aca3c2d22bec64c859f613b1297fb1b870",
+  "bytes": 201290,
+  "url": "europepmc:PMC12102120/fullTextXML",
+  "fetched_at": "2026-10-12T22:21:27+00:00"
+ },
+ "data/snapshots/europepmc/MED_40407910/record.json": {
+  "sha256": "97c5b427d88e414e98954b4251c11b5a35aed80277889dd8119ad0e7c028dfb8",
+  "bytes": 8527,
+  "url": "europepmc:MED:40407910",
+  "fetched_at": "2026-10-12T22:21:25+00:00"
+ },
+ "data/snapshots/europepmc/MED_40886001/fulltext.xml": {
+  "sha256": "19b84858222dbebb85e5ffd5c14dbb211e127c21242b9b87a66a31cf8a572f24",
+  "bytes": 127195,
+  "url": "europepmc:PMC12398016/fullTextXML",
+  "fetched_at": "2026-10-12T22:21:28+00:00"
+ },
+ "data/snapshots/europepmc/MED_40886001/record.json": {
+  "sha256": "e7053c0e9e58752385136205bc95dfb2bb97272a8843dd9e4b464fd16adf3871",
+  "bytes": 8520,
+  "url": "europepmc:MED:40886001",
+  "fetched_at": "2026-10-12T22:21:28+00:00"
+ },
+ "data/snapshots/europepmc/MED_41013772/fulltext.xml": {
+  "sha256": "e36f967fd3573214c810c57f95b4522f74672efeee12b1a1de49e79e0b3ea79f",
+  "bytes": 221206,
+  "url": "europepmc:PMC12465953/fullTextXML",
+  "fetched_at": "2026-10-12T22:21:29+00:00"
+ },
+ "data/snapshots/europepmc/MED_41013772/record.json": {
+  "sha256": "9dc0fb1f2759972ab8910dfe60951da93874a6471f323aff7fe1d7f1d317c874",
+  "bytes": 8905,
+  "url": "europepmc:MED:41013772",
+  "fetched_at": "2026-10-12T22:21:29+00:00"
+ },
+ "data/snapshots/europepmc/PMC_PMC7273783/fulltext.xml": {
+  "sha256": "919e9f6577444b3fecb0685e9dc3df6405fcb444c245a4d7740af378bdb46df9",
+  "bytes": 10935,
+  "url": "europepmc:PMC7273783/fullTextXML",
+  "fetched_at": "2026-10-12T22:21:18+00:00"
+ },
+ "data/snapshots/europepmc/PMC_PMC7273783/record.json": {
+  "sha256": "8e9cdef18f7ba786b19947d050da0f3246a1d860c483ef3fc7754b4d0e6e825b",
+  "bytes": 8219,
+  "url": "europepmc:PMC:PMC7273783",
+  "fetched_at": "2026-10-12T22:21:18+00:00"
+ }
+}

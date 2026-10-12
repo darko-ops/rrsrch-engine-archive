@@ -1,0 +1,28 @@
+[project]
+name = "rrsrch"
+version = "0.1.0"
+description = "The evidence engine for regenerative medicine: claims traced to source passages, checked by rule."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.27",
+    "psycopg[binary]>=3.2",
+    "pyyaml>=6.0",
+]
+
+[project.scripts]
+rrsrch = "rrsrch.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/rrsrch"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["network: hits Europe PMC / ClinicalTrials.gov (deselect with -m 'not network')", "db: needs the Postgres from docker-compose"]

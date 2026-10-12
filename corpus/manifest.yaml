@@ -1,0 +1,770 @@
+topic: MSC therapy for knee osteoarthritis
+answer_key:
+- pmid: '33407686'
+  pmcid: PMC7789676
+  title: 'Efficacy of mesenchymal stromal cells for the treatment of knee osteoarthritis: a meta-analysis
+    of randomized controlled trials.'
+  year: 2021
+  included_studies_from: table-1
+- pmid: '36601089'
+  pmcid: PMC9806366
+  title: 'The role of adipose-derived mesenchymal stem cells in knee osteoarthritis: a meta-analysis of
+    randomized controlled trials.'
+  year: 2022
+  included_studies_from: table-1
+- pmid: '39360004'
+  pmcid: PMC11445595
+  title: 'Advanced therapy with mesenchymal stromal cells for knee osteoarthritis: Systematic review and
+    meta-analysis of randomized controlled trials.'
+  year: 2024
+  included_studies_from: table-1
+- pmid: '39629035'
+  pmcid: PMC11613985
+  title: 'Efficacy and safety of mesenchymal stem cell injections for knee osteoarthritis: A systematic
+    review and meta-analysis.'
+  year: 2024
+  included_studies_from: table-1
+- pmid: '40055739'
+  pmcid: PMC11887158
+  title: 'Efficacy and safety of mesenchymal stem cells in knee osteoarthritis: a systematic review and
+    meta-analysis of randomized controlled trials.'
+  year: 2025
+  included_studies_from: table-1
+- pmid: '40407910'
+  pmcid: PMC12102120
+  title: 'Adipose- and bone marrow-derived stromal cells reduce pain in patients with knee osteoarthritis
+    but do not substantially improve knee functionality: an updated systematic review and meta-analysis.'
+  year: 2025
+  included_studies_from: table-1
+- pmid: '40886001'
+  pmcid: PMC12398016
+  title: 'Efficacy of a single intra-articular injection of mesenchymal stem cells for knee osteoarthritis:
+    a dose-focused meta-analysis of randomized controlled trials.'
+  year: 2025
+  included_studies_from: table-1
+- pmid: '41013772'
+  pmcid: PMC12465953
+  title: 'Efficacy and safety of single versus repeated injections of mesenchymal stem cells for the treatment
+    of knee osteoarthritis: a systematic review and network meta-analysis of randomized controlled trials.'
+  year: 2025
+  included_studies_from: table-1
+studies:
+- id: MED:11869080
+  title: Human autologous culture expanded bone marrow mesenchymal cell transplantation for repair of
+    cartilage defects in osteoarthritic knees.
+  included_by:
+  - '39360004'
+  resolved_by: reference-list
+  review: false
+  cited_as:
+    '39360004': 'Wakitani S., Imoto K., Yamamoto T., Saito M., Murata N., Yoneda M. Human autologous culture
+      expanded bone marrow mesenchymal cell transplantation for repair of cartilage defects in osteoarthritic
+      knees. Osteoarthritis Cartilage. 2002;10(3):199–206. doi: 10.1053/joca.2001.0504.'
+- id: MED:21510531
+  title: The new avenues in the management of osteo-arthritis of knee--stem cells.
+  included_by:
+  - '33407686'
+  resolved_by: reference-list
+  review: false
+  cited_as:
+    '33407686': Varma HS, Dadarya B, Vidyarthi A. The new avenues in the management of osteo-arthritis
+      of knee--stem cells. J Indian Med Assoc. 2010;108(9):583–585.
+- id: MED:23235728
+  title: A novel, minimally-invasive technique of cartilage repair in the human knee using arthroscopic
+    microfracture and injections of mesenchymal stem cells and hyaluronic acid--a prospective comparative
+    study on safety and short-term efficacy.
+  included_by:
+  - '39629035'
+  resolved_by: reference-list
+  review: false
+  cited_as:
+    '39629035': Lee KB, Wang VT, Chan YH, Hui JH. A novel, minimally-invasive technique of cartilage repair
+      in the human knee using arthroscopic microfracture and injections of mesenchymal stem cells and
+      hyaluronic acid-A prospective comparative study on safety and short-term efficacy. Ann Acad Med
+      Singap. 2012;41:511–7.
+- id: MED:23380230
+  title: 'Articular cartilage regeneration with autologous peripheral blood stem cells versus hyaluronic
+    acid: a randomized controlled trial.'
+  included_by:
+  - '33407686'
+  resolved_by: reference-list
+  review: false
+  cited_as:
+    '33407686': 'Saw KY, Anz A, Siew-Yoke Jee C, Merican S, Ching-Soong Ng R, Roohi SA, et al. Articular
+      cartilage regeneration with autologous peripheral blood stem cells versus hyaluronic acid: a randomized
+      controlled trial. Arthroscopy. 2013;29(4):684–694. doi: 10.1016/j.arthro.2012.12.008.'
+- id: MED:23680930
+  title: 'Treatment of knee osteoarthritis with autologous mesenchymal stem cells: a pilot study.'
+  included_by:
+  - '39629035'
+  resolved_by: reference-list
+  review: false
+  cited_as:
+    '39629035': 'Orozco L, Munar A, Soler R, Alberca M, Soler F, Huguet M, et al. Treatment of knee osteoarthritis
+      with autologous mesenchymal stem cells: A pilot study. Transplantation. 2013;95:1535–41. doi: 10.1097/TP.0b013e318291a2da.'
+- id: MED:24286801
+  title: 'Injectable cultured bone marrow-derived mesenchymal stem cells in varus knees with cartilage
+    defects undergoing high tibial osteotomy: a prospective, randomized controlled clinical trial with
+    2 years'' follow-up.'
+  included_by:
+  - '33407686'
+  - '39360004'
+  resolved_by: reference-list
+  review: false
+  cited_as:
+    '39360004': 'Wong K.L., Lee K.B.L., Tai B.C., Law P., Lee E.H., Hui J.H.P. Injectable cultured bone
+      marrow-derived mesenchymal stem cells in varus knees with cartilage defects undergoing high tibial
+      osteotomy: a prospective, randomized controlled clinical trial with 2 years'' follow-up. Arthroscopy.
+      2013;29(12):2020–2028. doi: 10.1016/j.arthro.2013.09.074.'
+    '33407686': 'Wong KL, Lee KB, Tai BC, Law P, Lee EH, Hui JH. Injectable cultured bone marrow-derived
+      mesenchymal stem cells in varus knees with cartilage defects undergoing high tibial osteotomy: a
+      prospective, randomized controlled clinical trial with 2 years'' follow-up. Arthroscopy. 2013;29(12):2020–2028.
+      doi: 10.1016/j.arthro.2013.09.074.'
+- id: MED:24430407
+  title: 'Adult human mesenchymal stem cells delivered via intra-articular injection to the knee following
+    partial medial meniscectomy: a randomized, double-blind, controlled study.'
+  included_by:
+  - '33407686'
+  - '39629035'
+  resolved_by: reference-list
+  review: false
+  cited_as:
+    '33407686': 'Vangsness CT, Jr, Farr J, 2nd, Boyd J, Dellaero DT, Mills CR, LeRoux-Williams M. Adult
+      human mesenchymal stem cells delivered via intra-articular injection to the knee following partial
+      medial meniscectomy: a randomized, double-blind, controlled study. J Bone Joint Surg Am. 2014;96(2):90–98.
+      doi: 10.2106/JBJS.M.00058.'
+    '39629035': 'Vangsness CT, Jr., Farr J, 2nd, Boyd J, Dellaero DT, Mills CR, LeRoux-Williams M. Adult
+      human mesenchymal stem cells delivered via intra-articular injection to the knee following partial
+      medial meniscectomy: A randomized, double-blind, controlled study. J Bone Joint Surg Am. 2014;96:90–8.
+      doi: 10.2106/JBJS.M.00058.'
+- id: MED:25548122
+  title: 'Matrix-induced autologous mesenchymal stem cell implantation versus matrix-induced autologous
+    chondrocyte implantation in the treatment of chondral defects of the knee: a 2-year randomized study.'
+  included_by:
+  - '39360004'
+  resolved_by: europepmc-search
+  review: true
+  cited_as:
+    '39360004': 'Akgun I., Unlu M.C., Erdal O.A., Ogut T., Erturk M., Ovali E., et al. Matrix-induced
+      autologous mesenchymal stem cell implantation versus matrix-induced autologous chondrocyte implantation
+      in the treatment of chondral defects of the knee: a 2-year randomized study. Arch Orthop Trauma
+      Surg. 2015;135(2):251–263. doi: 10.1007/s00402-014-2136-z.'
+- id: MED:25822648
+  title: 'Treatment of Knee Osteoarthritis With Allogeneic Bone Marrow Mesenchymal Stem Cells: A Randomized
+    Controlled Trial.'
+  included_by:
+  - '33407686'
+  - '39360004'
+  - '39629035'
+  - '40055739'
+  - '40886001'
+  - '41013772'
+  resolved_by: reference-list
+  review: false
+  cited_as:
+    '40055739': Vega et al. (2015)
+    '39360004': 'Vega A., Martín-Ferrero M.A., Del Canto F., Alberca M., García V., Munar A., et al. Treatment
+      of knee osteoarthritis with allogeneic bone marrow mesenchymal stem cells: a randomized controlled
+      trial. Transplantation. 2015;99(8):1681–1690. doi: 10.1097/TP.0000000000000678.'
+    '33407686': 'Vega A, Martin-Ferrero MA, Del Canto F, Alberca M, Garcia V, Munar A, et al. Treatment
+      of knee osteoarthritis with allogeneic bone marrow mesenchymal stem cells: a randomized controlled
+      trial. Transplantation. 2015;99(8):1681–1690. doi: 10.1097/TP.0000000000000678.'
+    '39629035': 'Vega A, Martín-Ferrero MA, Del Canto F, Alberca M, García V, Munar A, et al. Treatment
+      of knee osteoarthritis with allogeneic bone marrow mesenchymal stem cells: A randomized controlled
+      trial. Transplantation. 2015;99:1681–90. doi: 10.1097/TP.0000000000000678.'
+    '41013772': 'Vega A, Martín-Ferrero MA, Del Canto F, Alberca M, García V, Munar A, et al. Treatment
+      of knee osteoarthritis with allogeneic bone marrow mesenchymal stem cells: a randomized controlled
+      trial. Transplantation. 2015;99(8):1681–90.'
+    '40886001': 'Vega A, et al. Treatment of Knee Osteoarthritis With Allogeneic Bone Marrow Mesenchymal
+      Stem Cells: A Randomized Controlled Trial. Transplantation. 2015;99:1681–90.10.1097/TP.000000000000067825822648'
+- id: MED:27217345
+  title: 'Adipose Mesenchymal Stromal Cell-Based Therapy for Severe Osteoarthritis of the Knee: A Phase
+    I Dose-Escalation Trial.'
+  included_by:
+  - '39629035'
+  resolved_by: reference-list
+  review: false
+  cited_as:
+    '39629035': 'Pers YM, Rackwitz L, Ferreira R, Pullig O, Delfour C, Barry F, et al. Adipose mesenchymal
+      stromal cell-based therapy for severe osteoarthritis of the knee: A phase I dose-escalation trial.
+      Stem Cells Transl Med. 2016;5:847–56. doi: 10.5966/sctm.2015-0245.'
+- id: MED:27565858
+  title: 'Intra-articular injection of two different doses of autologous bone marrow mesenchymal stem
+    cells versus hyaluronic acid in the treatment of knee osteoarthritis: multicenter randomized controlled
+    clinical trial (phase I/II).'
+  included_by:
+  - '33407686'
+  - '39360004'
+  - '39629035'
+  - '40055739'
+  - '40407910'
+  - '41013772'
+  resolved_by: reference-list
+  review: false
+  cited_as:
+    '40055739': Lamo-Espinosa et al. (2016)
+    '40407910': Lamo-Espinoza 2016 (2016)
+    '39360004': 'Lamo-Espinosa J.M., Mora G., Blanco J.F., Granero-Moltó F., Nuñez-Córdoba J.M., Sánchez-Echenique
+      C., et al. Intra-articular injection of two different doses of autologous bone marrow mesenchymal
+      stem cells versus hyaluronic acid in the treatment of knee osteoarthritis: multicenter randomized
+      controlled clinical trial (phase I/II) J Transl Med. 2016;14(1) doi: 10.1186/s12967-016-0998-2.'
+    '33407686': 'Lamo-Espinosa JM, Mora G, Blanco JF, Granero-Molto F, Nunez-Cordoba JM, Sanchez-Echenique
+      C, et al. Intra-articular injection of two different doses of autologous bone marrow mesenchymal
+      stem cells versus hyaluronic acid in the treatment of knee osteoarthritis: multicenter randomized
+      controlled clinical trial (phase I/II) J Transl Med. 2016;14(1):246. doi: 10.1186/s12967-016-0998-2.'
+    '39629035': 'Lamo-Espinosa JM, Mora G, Blanco JF, Granero-Moltó F, Nuñez-Córdoba JM, Sánchez-Echenique
+      C, et al. Intra-articular injection of two different doses of autologous bone marrow mesenchymal
+      stem cells versus hyaluronic acid in the treatment of knee osteoarthritis: Multicenter randomized
+      controlled clinical trial (phase I/II) J Transl Med. 2016;14:246. doi: 10.1186/s12967-016-0998-2.'
+    '41013772': 'Lamo-Espinosa JM, Mora G, Blanco JF, Granero-Moltó F, Nuñez-Córdoba JM, Sánchez-Echenique
+      C, et al. Intra-articular injection of two different doses of autologous bone marrow mesenchymal
+      stem cells versus hyaluronic acid in the treatment of knee osteoarthritis: multicenter randomized
+      controlled clinical trial (phase I/II). J Transl Med. 2016;14(1):246.'
+- id: MED:27993154
+  title: 'Efficacy and safety of adult human bone marrow-derived, cultured, pooled, allogeneic mesenchymal
+    stromal cells (Stempeucel®): preclinical and clinical trial in osteoarthritis of the knee joint.'
+  included_by:
+  - '33407686'
+  - '39360004'
+  - '41013772'
+  resolved_by: reference-list
+  review: false
+  cited_as:
+    '39360004': 'Gupta P.K., Chullikana A., Rengasamy M., Shetty N., Pandey V., Agarwal V., et al. Efficacy
+      and safety of adult human bone marrow-derived, cultured, pooled, allogeneic mesenchymal stromal
+      cells (Stempeucel®): preclinical and clinical trial in osteoarthritis of the knee joint. Arthritis
+      Res Ther. 2016;18(1) doi: 10.1186/s13075-016-1195-7.'
+    '33407686': 'Gupta PK, Chullikana A, Rengasamy M, Shetty N, Pandey V, Agarwal V, et al. Efficacy and
+      safety of adult human bone marrow-derived, cultured, pooled, allogeneic mesenchymal stromal cells
+      (Stempeucel(R)): preclinical and clinical trial in osteoarthritis of the knee joint. Arthritis Res
+      Ther. 2016;18(1):301. doi: 10.1186/s13075-016-1195-7.'
+    '41013772': 'Gupta PK, Chullikana A, Rengasamy M, Shetty N, Pandey V, Agarwal V, et al. Efficacy and
+      safety of adult human bone marrow-derived, cultured, pooled, allogeneic mesenchymal stromal cells
+      (Stempeucel®): preclinical and clinical trial in osteoarthritis of the knee joint. Arthritis Res
+      Ther. 2016;18(1):301.'
+- id: MED:28416171
+  title: The comparison of knee osteoarthritis treatment with single-dose bone marrow-derived mononuclear
+    cells vs. hyaluronic acid injections.
+  included_by:
+  - '41013772'
+  resolved_by: reference-list
+  review: false
+  cited_as:
+    '41013772': Goncars V, Jakobsons E, Blums K, Briede I, Patetko L, Erglis K, et al. The comparison
+      of knee osteoarthritis treatment with single-dose bone marrow-derived mononuclear cells vs. hyaluronic
+      acid injections. Medicina (B Aires). 2017;53(2):101–8.
+- id: MED:28746812
+  title: 'Intra-articular Injection of Mesenchymal Stem Cells for the Treatment of Osteoarthritis of the
+    Knee: A 2-Year Follow-up Study.'
+  included_by:
+  - '39629035'
+  resolved_by: reference-list
+  review: false
+  cited_as:
+    '39629035': 'Jo CH, Chai JW, Jeong EC, Oh S, Shin JS, Shim H, et al. Intra-articular injection of
+      mesenchymal stem cells for the treatment of osteoarthritis of the knee: A 2-year follow-up study.
+      Am J Sports Med. 2017;45:2774–83. doi: 10.1177/0363546517716641.'
+- id: MED:28752679
+  title: The effect of intra-articular injection of autologous bone marrow stem cells on pain and knee
+    function in patients with osteoarthritis.
+  included_by:
+  - '39629035'
+  - '41013772'
+  resolved_by: europepmc-search
+  review: true
+  cited_as:
+    '39629035': 'Garay-Mendoza D, Villarreal-Martínez L, Garza-Bedolla A, Pérez-Garza DM, Acosta-Olivo
+      C, Vilchez-Cavazos F, et al. The effect of intra-articular injection of autologous bone marrow stem
+      cells on pain and knee function in patients with osteoarthritis. Int J Rheum Dis. 2018;21:140–7.
+      doi: 10.1111/1756-185X.13139.'
+    '41013772': Garay-Mendoza D, Villarreal-Martínez L, Garza-Bedolla A, Pérez-Garza DM, Acosta-Olivo
+      C, Vilchez-Cavazos F, et al. The effect of intra-articular injection of autologous bone marrow stem
+      cells on pain and knee function in patients with osteoarthritis. Int J Rheum Dis. 2018;21(1):140–7.
+- id: MED:29243283
+  title: Intra-articular injection of autologous adipose-derived mesenchymal stem cells in the treatment
+    of knee osteoarthritis.
+  included_by:
+  - '39629035'
+  resolved_by: reference-list
+  review: false
+  cited_as:
+    '39629035': 'Spasovski D, Spasovski V, Baščarević Z, Stojiljković M, Vreća M, Anđelković M, et al.
+      Intra-articular injection of autologous adipose-derived mesenchymal stem cells in the treatment
+      of knee osteoarthritis. J Gene Med. 2018;20:e3002. doi: 10.1002/jgm.3002.'
+- id: MED:29428486
+  title: 'Intra-articular knee implantation of autologous bone marrow-derived mesenchymal stromal cells
+    in rheumatoid arthritis patients with knee involvement: Results of a randomized, triple-blind, placebo-controlled
+    phase 1/2 clinical trial.'
+  included_by:
+  - '39360004'
+  resolved_by: reference-list
+  review: false
+  cited_as:
+    '39360004': 'Shadmanfar S., Labibzadeh N., Emadedin M., Jaroughi N., Azimian V., Mardpour S., et al.
+      Intra-articular knee implantation of autologous bone marrow-derived mesenchymal stromal cells in
+      rheumatoid arthritis patients with knee involvement: results of a randomized, triple-blind, placebo-controlled
+      phase 1/2 clinical trial. Cytotherapy. 2018;20(4):499–506. doi: 10.1016/j.jcyt.2017.12.009.'
+- id: MED:29510712
+  title: 'Safety, tolerability and efficacy of intra-articular Progenza in knee osteoarthritis: a randomized
+    double-blind placebo-controlled single ascending dose study.'
+  included_by:
+  - '39629035'
+  - '41013772'
+  resolved_by: reference-list
+  review: false
+  cited_as:
+    '39629035': 'Kuah D, Sivell S, Longworth T, James K, Guermazi A, Cicuttini F, et al. Safety, tolerability
+      and efficacy of intra-articular progenza in knee osteoarthritis: A randomized double-blind placebo-controlled
+      single ascending dose study. J Transl Med. 2018;16:49. doi: 10.1186/s12967-018-1420-z.'
+    '41013772': 'Kuah D, Sivell S, Longworth T, James K, Guermazi A, Cicuttini F, et al. Safety, tolerability
+      and efficacy of intra-articular progenza in knee osteoarthritis: a randomized double-blind placebo-controlled
+      single ascending dose study. J Transl Med. 2018;16(1):49.'
+- id: MED:29786336
+  title: '[CURATIVE EFFECT OF HUMAN UMBILICAL CORD MESENCHYMAL STEM CELLS BY INTRA-ARTICULAR INJECTION
+    FOR DEGENERATIVE KNEE OSTEOARTHRITIS].'
+  included_by:
+  - '39360004'
+  resolved_by: reference-list
+  review: false
+  cited_as:
+    '39360004': 'Wang Y., Jin W., Liu H., Cui Y., Mao Q., Fei Z., et al. [curative effect of human umbilical
+      cord mesenchymal stem cells by intra-articular injection for degenerative knee osteoarthritis] Zhongguo
+      Xiu Fu Chong Jian Wai Ke Za Zhi. 2016;30(12):1472–1477. doi: 10.7507/1002-1892.20160305.'
+- id: MED:30064455
+  title: 'Intra-articular injection of two different doses of autologous bone marrow mesenchymal stem
+    cells versus hyaluronic acid in the treatment of knee osteoarthritis: long-term follow up of a multicenter
+    randomized controlled clinical trial (phase I/II).'
+  included_by:
+  - '41013772'
+  resolved_by: reference-list
+  review: false
+  cited_as:
+    '41013772': 'Lamo-Espinosa JM, Mora G, Blanco JF, Granero-Moltó F, Núñez-Córdoba JM, López-Elío S,
+      et al. Intra-articular injection of two different doses of autologous bone marrow mesenchymal stem
+      cells versus hyaluronic acid in the treatment of knee osteoarthritis: long-term follow up of a multicenter
+      randomized controlled clinical trial (phase I/II). J Transl Med. 2018;16(1):213.'
+- id: MED:30109404
+  title: 'Intra-articular injection of autologous adipose-derived stromal vascular fractions for knee
+    osteoarthritis: a double-blind randomized self-controlled trial.'
+  included_by:
+  - '36601089'
+  resolved_by: europepmc-search
+  review: true
+  cited_as:
+    '36601089': 'HongZ ChenJ ZhangS , et al. Intra-articular injection of autologous adipose-derived stromal
+      vascular fractions for knee osteoarthritis: a double-blind randomized self-controlled trial. Int
+      Orthop 2019; 43: 1123–1134.3010940410.1007/s00264-018-4099-0'
+- id: MED:30318332
+  title: 'Intra-articular implantation of autologous bone marrow-derived mesenchymal stromal cells to
+    treat knee osteoarthritis: a randomized, triple-blind, placebo-controlled phase 1/2 clinical trial.'
+  included_by:
+  - '33407686'
+  - '39360004'
+  - '41013772'
+  resolved_by: reference-list
+  review: false
+  cited_as:
+    '39360004': 'Emadedin M., Labibzadeh N., Liastani M.G., Karimi A., Jaroughi N., Bolurieh T., et al.
+      Intra-articular implantation of autologous bone marrow-derived mesenchymal stromal cells to treat
+      knee osteoarthritis: a randomized, triple-blind, placebo-controlled phase 1/2 clinical trial. Cytotherapy.
+      2018;20(10):1238–1246. doi: 10.1016/j.jcyt.2018.08.005.'
+    '33407686': 'Emadedin M, Labibzadeh N, Liastani MG, Karimi A, Jaroughi N, Bolurieh T, et al. Intra-articular
+      implantation of autologous bone marrow-derived mesenchymal stromal cells to treat knee osteoarthritis:
+      a randomized, triple-blind, placebo-controlled phase 1/2 clinical trial. Cytotherapy. 2018;20(10):1238–1246.
+      doi: 10.1016/j.jcyt.2018.08.005.'
+    '41013772': 'Emadedin M, Labibzadeh N, Liastani MG, Karimi A, Jaroughi N, Bolurieh T, et al. Intra-articular
+      implantation of autologous bone marrow-derived mesenchymal stromal cells to treat knee osteoarthritis:
+      a randomized, triple-blind, placebo-controlled phase 1/2 clinical trial. Cytotherapy. 2018;20(10):1238–46.'
+- id: MED:30522806
+  title: 'Safety and efficacy of allogenic placental mesenchymal stem cells for treating knee osteoarthritis:
+    a pilot study.'
+  included_by:
+  - '39360004'
+  resolved_by: europepmc-search
+  review: true
+  cited_as:
+    '39360004': 'Khalifeh Soltani S., Forogh B., Ahmadbeigi N., Hadizadeh Kharazi H., Fallahzadeh K.,
+      Kashani L., et al. Safety and efficacy of allogenic placental mesenchymal stem cells for treating
+      knee osteoarthritis: a pilot study. Cytotherapy. 2019;21(1):54–63. doi: 10.1016/j.jcyt.2018.11.003.'
+- id: MED:30592390
+  title: 'Umbilical Cord-Derived Mesenchymal Stromal Cells (MSCs) for Knee Osteoarthritis: Repeated MSC
+    Dosing Is Superior to a Single MSC Dose and to Hyaluronic Acid in a Controlled Randomized Phase I/II
+    Trial.'
+  included_by:
+  - '39360004'
+  - '40886001'
+  - '41013772'
+  resolved_by: europepmc-search
+  review: true
+  cited_as:
+    '39360004': 'Matas J., Orrego M., Amenabar D., Infante C., Tapia-Limonchi R., Cadiz M.I., et al. Umbilical
+      cord-derived mesenchymal stromal cells (MSCs) for knee osteoarthritis: repeated MSC dosing is superior
+      to a single MSC dose and to hyaluronic acid in a controlled randomized phase I/II trial. Stem Cells
+      Transl Med. 2019;8(3):215–224. doi: 10.1002/sctm.18-0053.'
+    '41013772': 'Matas J, Orrego M, Amenabar D, Infante C, Tapia-Limonchi R, Cadiz MI, et al. Umbilical
+      cord-derived mesenchymal stromal cells (MSCs) for knee osteoarthritis: repeated MSC dosing is superior
+      to a single MSC dose and to hyaluronic acid in a controlled randomized phase I/II trial. Stem Cells
+      Transl Med. 2019;8(3):215–24.'
+    '40886001': 'MatasJUmbilical cord-derived mesenchymal stromal cells (MSCs) for knee osteoarthritis:
+      repeated MSC dosing is superior to a single MSC dose and to hyaluronic acid in a controlled randomized
+      phase I/II trialStem Cells Transl Med20198215243059239010.1002/sctm.18-0053PMC6392367Matas J, et
+      al. Umbilical cord-derived mesenchymal stromal cells (MSCs) for knee osteoarthritis: repeated MSC
+      dosing is super'
+- id: MED:30762487
+  title: 'Adipose-derived mesenchymal stem cell therapy in the treatment of knee osteoarthritis: a randomized
+    controlled trial.'
+  included_by:
+  - '36601089'
+  - '39360004'
+  - '40055739'
+  - '40407910'
+  - '41013772'
+  resolved_by: reference-list
+  review: false
+  cited_as:
+    '40055739': Freitag et al. (2019)
+    '40407910': Freitag 2019 (2019)
+    '39360004': 'Freitag J., Bates D., Wickham J., Shah K., Huguenin L., Tenen A., et al. Adipose-derived
+      mesenchymal stem cell therapy in the treatment of knee osteoarthritis: a randomized controlled trial.
+      Regen Med. 2019;14(3):213–230. doi: 10.2217/rme-2018-0161.'
+    '36601089': 'FreitagJ BatesD WickhamJ , et al. Adipose-derived mesenchymal stem cell therapy in the
+      treatment of knee osteoarthritis: a randomized controlled trial. Regen Med 2019; 14: 213–230.3076248710.2217/rme-2018-0161'
+    '41013772': 'Freitag J, Bates D, Wickham J, Shah K, Huguenin L, Tenen A, et al. Adipose-derived mesenchymal
+      stem cell therapy in the treatment of knee osteoarthritis: a randomized controlled trial. Regen
+      Med. 2019;14(3):213–30.'
+- id: MED:30835956
+  title: 'Intra-Articular Injection of Autologous Adipose Tissue-Derived Mesenchymal Stem Cells for the
+    Treatment of Knee Osteoarthritis: A Phase IIb, Randomized, Placebo-Controlled Clinical Trial.'
+  included_by:
+  - '36601089'
+  - '39360004'
+  - '40055739'
+  - '40407910'
+  - '41013772'
+  resolved_by: reference-list
+  review: false
+  cited_as:
+    '40055739': Lee et al. (2019)
+    '40407910': Lee 2019 (2019)
+    '39360004': 'Lee W.-S., Kim H.J., Kim K.-I., Kim G.B., Jin W. Intra-articular injection of autologous
+      adipose tissue-derived mesenchymal stem cells for the treatment of knee osteoarthritis: a phase
+      IIb, randomized, placebo-controlled clinical trial. Stem Cells Transl Med. 2019;8(6):504–511. doi:
+      10.1002/sctm.18-0122.'
+    '36601089': 'LeeWS KimHJ KimKI , et al. Intra-articular injection of autologous adipose tissue-derived
+      mesenchymal stem cells for the treatment of knee osteoarthritis: a phase IIb, randomized, placebo-controlled
+      clinical trial. Stem Cells Transl Med 2019; 8: 504–511.3083595610.1002/sctm.18-0122PMC6525553'
+    '41013772': 'Lee WS, Kim HJ, Kim KI, Kim GB, Jin W. Intra-articular injection of autologous adipose
+      tissue-derived mesenchymal stem cells for the treatment of knee osteoarthritis: a phase IIb, randomized,
+      placebo-controlled clinical trial. Stem Cells Transl Med. 2019;8(6):504–11.'
+- id: MED:30964245
+  title: Bone Marrow Mesenchymal Stromal Cell Treatment in Patients with Osteoarthritis Results in Overall
+    Improvement in Pain and Symptoms and Reduces Synovial Inflammation.
+  included_by:
+  - '39629035'
+  resolved_by: reference-list
+  review: false
+  cited_as:
+    '39629035': 'Chahal J, Gómez-Aristizábal A, Shestopaloff K, Bhatt S, Chaboureau A, Fazio A, et al.
+      Bone marrow mesenchymal stromal cell treatment in patients with osteoarthritis results in overall
+      improvement in pain and symptoms and reduces synovial inflammation. Stem Cells Transl Med. 2019;8:746–57.
+      doi: 10.1002/sctm.18-0183.'
+- id: MED:30987218
+  title: Time- and Kellgren⁻Lawrence Grade-Dependent Changes in Intra-Articularly Transplanted Stromal
+    Vascular Fraction in Osteoarthritic Patients.
+  included_by:
+  - '39629035'
+  resolved_by: reference-list
+  review: false
+  cited_as:
+    '39629035': 'Tran TD, Wu CM, Dubey NK, Deng YH, Su CW, Pham TT, et al. Time- and kellgren ⁻ lawrence
+      grade-dependent changes in intra-articularly transplanted stromal vascular fraction in osteoarthritic
+      patients. Cells. 2019;8:308. doi: 10.3390/cells8040308.'
+- id: MED:31113476
+  title: 'Treatment of knee osteoarthritis with intra-articular injection of autologous adipose-derived
+    mesenchymal progenitor cells: a prospective, randomized, double-blind, active-controlled, phase IIb
+    clinical trial.'
+  included_by:
+  - '36601089'
+  - '40055739'
+  - '40407910'
+  - '41013772'
+  resolved_by: reference-list
+  review: false
+  cited_as:
+    '40055739': Lu et al. (2019)
+    '40407910': Lu 2019 (2019)
+    '36601089': 'LuL DaiC ZhangZ , et al. Treatment of knee osteoarthritis with intra-articular injection
+      of autologous adipose-derived mesenchymal progenitor cells: a prospective, randomized, double-blind,
+      active-controlled, phase IIb clinical trial. Stem Cell Res Ther 2019; 10: 143.3111347610.1186/s13287-019-1248-3PMC6528322'
+    '41013772': 'Lu L, Dai C, Zhang Z, Du H, Li S, Ye P, et al. Treatment of knee osteoarthritis with
+      intra-articular injection of autologous adipose-derived mesenchymal progenitor cells: a prospective,
+      randomized, double-blind, active-controlled, phase IIb clinical trial. Stem Cell Res Ther. 2019;10(1):143.'
+- id: MED:31312692
+  title: 'Transplantation of autologous bone marrow-derived mesenchymal stem cells under arthroscopic
+    surgery with microfracture versus microfracture alone for articular cartilage lesions in the knee:
+    A multicenter prospective randomized control clinical trial.'
+  included_by:
+  - '39360004'
+  resolved_by: reference-list
+  review: false
+  cited_as:
+    '39360004': 'Hashimoto Y., Nishida Y., Takahashi S., Nakamura H., Mera H., Kashiwa K., et al. Transplantation
+      of autologous bone marrow-derived mesenchymal stem cells under arthroscopic surgery with microfracture
+      versus microfracture alone for articular cartilage lesions in the knee: a multicenter prospective
+      randomized control clinical trial. Regenerative Therapy. 2019;11:106–113. doi: 10.1016/j.reth.2019.06.'
+- id: MED:31373830
+  title: Comparative Clinical Outcomes After Intra-articular Injection With Adipose-Derived Cultured Stem
+    Cells or Noncultured Stromal Vascular Fraction for the Treatment of Knee Osteoarthritis.
+  included_by:
+  - '40407910'
+  resolved_by: reference-list
+  review: false
+  cited_as:
+    '40407910': Yokota 2019Koos 4
+- id: MED:31587091
+  title: 'Intra-articular injection of culture-expanded mesenchymal stem cells with or without addition
+    of platelet-rich plasma is effective in decreasing pain and symptoms in knee osteoarthritis: a controlled,
+    double-blind clinical trial.'
+  included_by:
+  - '39360004'
+  - '39629035'
+  - '40055739'
+  - '40407910'
+  - '41013772'
+  resolved_by: reference-list
+  review: false
+  cited_as:
+    '40055739': Bastos et al. (2019)
+    '40407910': Bastos 2019 (2019)
+    '39360004': 'Bastos R., Mathias M., Andrade R., Amaral R.J.F.C., Schott V., Balduino A., et al. Intra-articular
+      injection of culture-expanded mesenchymal stem cells with or without addition of platelet-rich plasma
+      is effective in decreasing pain and symptoms in knee osteoarthritis: a controlled, double-blind
+      clinical trial. Knee Surg Sports Traumatol Arthrosc. 2020;28(6):1989–1999. doi: 10.1007/s00167-019-0573'
+    '39629035': 'Bastos R, Mathias M, Andrade R, Amaral RJ, Schott V, Balduino A, et al. Intra-articular
+      injection of culture-expanded mesenchymal stem cells with or without addition of platelet-rich plasma
+      is effective in decreasing pain and symptoms in knee osteoarthritis: A controlled, double-blind
+      clinical trial. Knee Surg Sports Traumatol Arthrosc. 2020;28:1989–99. doi: 10.1007/s00167-019-05732-8.'
+    '41013772': 'Bastos R, Mathias M, Andrade R, Amaral R, Schott V, Balduino A, et al. Intra-articular
+      injection of culture-expanded mesenchymal stem cells with or without addition of platelet-rich plasma
+      is effective in decreasing pain and symptoms in knee osteoarthritis: a controlled, double-blind
+      clinical trial. Knee Surg Sports Traumatol Arthrosc. 2020;28(6):1989–99.'
+- id: MED:31639063
+  title: Multi-compositional MRI evaluation of repair cartilage in knee osteoarthritis with treatment
+    of allogeneic human adipose-derived mesenchymal progenitor cells.
+  included_by:
+  - '39360004'
+  resolved_by: reference-list
+  review: false
+  cited_as:
+    '39360004': 'Zhao X., Ruan J., Tang H., Li J., Shi Y., Li M., et al. Multi-compositional MRI evaluation
+      of repair cartilage in knee osteoarthritis with treatment of allogeneic human adipose-derived mesenchymal
+      progenitor cells. Stem Cell Res Ther. 2019;10(1) doi: 10.1186/s13287-019-1406-7.'
+- id: MED:31980879
+  title: Human umbilical cord blood-derived mesenchymal stem cell implantation for osteoarthritis of the
+    knee.
+  included_by:
+  - '39629035'
+  resolved_by: europepmc-search
+  review: true
+  cited_as:
+    '39629035': 'Song, Jun-Seob, et al. “Human umbilical cord blood-derived mesenchymal stem cell implantation
+      for osteoarthritis of the knee”. Archives of Orthopaedic and Trauma Surgery. 2020;140:503–9. doi:
+      10.1007/s00402-020-03349-y.'
+- id: MED:32109160
+  title: 'Clinical Efficacy of Intra-articular Mesenchymal Stromal Cells for the Treatment of Knee Osteoarthritis:
+    A Double-Blinded Prospective Randomized Controlled Clinical Trial.'
+  included_by:
+  - '39629035'
+  - '41013772'
+  resolved_by: reference-list
+  review: false
+  cited_as:
+    '39629035': 'Garza JR, Campbell RE, Tjoumakaris FP, Freedman KB, Miller LS, Santa Maria D, et al.
+      Clinical efficacy of intra-articular mesenchymal stromal cells for the treatment of knee osteoarthritis:
+      A double-blinded prospective randomized controlled clinical trial. Am J Sports Med. 2020;48:588–98.
+      doi: 10.1177/0363546519899923.'
+    '41013772': 'Garza JR, Campbell RE, Tjoumakaris FP, Freedman KB, Miller LS, Santa Maria D, et al.
+      Clinical efficacy of intra-articular mesenchymal stromal cells for the treatment of knee osteoarthritis:
+      a double-blinded prospective randomized controlled clinical trial. Am J Sports Med. 2020;48(3):588–98.'
+- id: MED:32677876
+  title: 'Intra-articular injections of allogeneic human adipose-derived mesenchymal progenitor cells
+    in patients with symptomatic bilateral knee osteoarthritis: a Phase I pilot study.'
+  included_by:
+  - '39360004'
+  resolved_by: reference-list
+  review: false
+  cited_as:
+    '39360004': 'Lu L., Dai C., Du H., Li S., Ye P., Zhang L., et al. Intra-articular injections of allogeneic
+      human adipose-derived mesenchymal progenitor cells in patients with symptomatic bilateral knee osteoarthritis:
+      a Phase I pilot study. Regen Med. 2020;15(5):1625–1636. doi: 10.2217/rme-2019-0106.'
+- id: MED:32948200
+  title: Phase II multicenter randomized controlled clinical trial on the efficacy of intra-articular
+    injection of autologous bone marrow mesenchymal stem cells with platelet rich plasma for the treatment
+    of knee osteoarthritis.
+  included_by:
+  - '39360004'
+  - '40407910'
+  resolved_by: reference-list
+  review: false
+  cited_as:
+    '40407910': Lamo Espinoza 2020 (2020)
+    '39360004': 'Lamo-Espinosa J.M., Blanco J.F., Sánchez M., Moreno V., Granero-Moltó F., Sánchez-Guijo
+      F., et al. Phase II multicenter randomized controlled clinical trial on the efficacy of intra-articular
+      injection of autologous bone marrow mesenchymal stem cells with platelet rich plasma for the treatment
+      of knee osteoarthritis. J Transl Med. 2020;18(1):356. doi: 10.1186/s12967-020-02530-6.'
+- id: MED:33490296
+  title: 'Allogeneic Umbilical Cord Blood-Derived Mesenchymal Stem Cell Implantation Versus Microfracture
+    for Large, Full-Thickness Cartilage Defects in Older Patients: A Multicenter Randomized Clinical Trial
+    and Extended 5-Year Clinical Follow-up.'
+  included_by:
+  - '39360004'
+  resolved_by: reference-list
+  review: false
+  cited_as:
+    '39360004': 'Lim H.C., Park Y.B., Ha C.W., Cole B.J., Lee B.K., Jeong H.J., et al. Allogeneic umbilical
+      cord blood-derived mesenchymal stem cell implantation versus microfracture for large, full-thickness
+      cartilage defects in older patients: a multicenter randomized clinical trial and extended 5-year
+      clinical follow-up. Orthop J Sports Med. 2021;9(1) doi: 10.1177/2325967120973052.'
+- id: MED:34717765
+  title: 'Treatment of knee osteoarthritis with intra-articular injection of allogeneic adipose-derived
+    stem cells (ADSCs) ELIXCYTE®: a phase I/II, randomized, active-control, single-blind, multiple-center
+    clinical trial.'
+  included_by:
+  - '39360004'
+  - '40055739'
+  - '40886001'
+  - '41013772'
+  resolved_by: reference-list
+  review: false
+  cited_as:
+    '40055739': Chen et al. (2021)
+    '39360004': 'Chen C.F., Hu C.C., Wu C.T., Wu H.H., Chang C.S., Hung Y.P., et al. Treatment of knee
+      osteoarthritis with intra-articular injection of allogeneic adipose-derived stem cells (ADSCs) ELIXCYTE®:
+      a phase I/II, randomized, active-control, single-blind, multiple-center clinical trial. Stem Cell
+      Res Ther. 2021;12(1):562. doi: 10.1186/s13287-021-02631-z.'
+    '41013772': 'Chen CF, Hu CC, Wu CT, Wu HH, Chang CS, Hung YP, et al. Treatment of knee osteoarthritis
+      with intra-articular injection of allogeneic adipose-derived stem cells (ADSCs) ELIXCYTE®: a phase
+      I/II, randomized, active-control, single-blind, multiple-center clinical trial. Stem Cell Res Ther.
+      2021;12(1):562.'
+    '40886001': 'ChenC-FTreatment of knee osteoarthritis with intra-articular injection of allogeneic
+      adipose-derived stem cells (ADSCs) ELIXCYTE®: a phase I/II, randomized, active-control, single-blind,
+      multiple-center clinical trialStem Cell Res Ther2021125623471776510.1186/s13287-021-02631-zPMC8557559Chen
+      C-F, et al. Treatment of knee osteoarthritis with intra-articular injection of allogeneic adipose-derived
+      s'
+- id: MED:34845428
+  title: 'Autologous Bone Marrow-Derived Chondrocytes for Patients with Knee Osteoarthritis: A Randomized
+    Controlled Trial.'
+  included_by:
+  - '39360004'
+  resolved_by: reference-list
+  review: false
+  cited_as:
+    '39360004': 'Sadat-Ali M., AlOmran A.S., AlMousa S.A., AlSayed H.N., AlTabash K.W., Azam M.Q., et
+      al. Autologous bone marrow-derived chondrocytes for patients with knee osteoarthritis: a randomized
+      controlled trial. Adv Orthop. 2021;2021 doi: 10.1155/2021/2146722.'
+- id: MED:35674255
+  title: 'Intra-articular Injection of Mesenchymal Stem Cells After High Tibial Osteotomy in Osteoarthritic
+    Knee: Two-Year Follow-up of Randomized Control Trial.'
+  included_by:
+  - '39629035'
+  resolved_by: reference-list
+  review: false
+  cited_as:
+    '39629035': 'Kim JH, Kim KI, Yoon WK, Song SJ, Jin W. Intra-articular injection of mesenchymal stem
+      cells after high tibial osteotomy in osteoarthritic knee: Two-year follow-up of randomized control
+      trial. Stem Cells Transl Med. 2022;11:572–85. doi: 10.1093/stcltm/szac023.'
+- id: MED:36262962
+  title: Randomized control trial of mesenchymal stem cells versus hyaluronic acid in patients with knee
+    osteoarthritis - A Hong Kong pilot study.
+  included_by:
+  - '39360004'
+  - '40407910'
+  resolved_by: reference-list
+  review: false
+  cited_as:
+    '40407910': Ho 2022 (2022)
+    '39360004': 'Ho K.K.-W., Lee W.Y.-W., Griffith J.F., Ong M.T.-Y., Li G. Randomized control trial of
+      mesenchymal stem cells versus hyaluronic acid in patients with knee osteoarthritis - a Hong Kong
+      pilot study. J Orthop Translat. 2022;37:69–77. doi: 10.1016/j.jot.2022.07.012.'
+- id: MED:37316949
+  title: 'Cartilage regeneration and inflammation modulation in knee osteoarthritis following injection
+    of allogeneic adipose-derived mesenchymal stromal cells: a phase II, triple-blinded, placebo controlled,
+    randomized trial.'
+  included_by:
+  - '40886001'
+  resolved_by: reference-list
+  review: false
+  cited_as:
+    '40886001': 'SadriBCartilage regeneration and inflammation modulation in knee osteoarthritis following
+      injection of allogeneic adipose-derived mesenchymal stromal cells: a phase II, triple-blinded, placebo
+      controlled, randomized trialStem Cell Res Ther2023141623731694910.1186/s13287-023-03359-8PMC10268462Sadri
+      B, et al. Cartilage regeneration and inflammation modulation in knee osteoarthritis following injecti'
+- id: MED:37345256
+  title: 'Clinical Efficacy and Safety of the Intra-articular Injection of Autologous Adipose-Derived
+    Mesenchymal Stem Cells for Knee Osteoarthritis: A Phase III, Randomized, Double-Blind, Placebo-Controlled
+    Trial.'
+  included_by:
+  - '40055739'
+  - '40407910'
+  resolved_by: reference-list
+  review: false
+  cited_as:
+    '40055739': Kim et al. (2023)
+    '40407910': Kim 2023 (2023)
+- id: MED:37366164
+  title: 'Efficacy and Safety of Stempeucel in Osteoarthritis of the Knee: A Phase 3 Randomized, Double-Blind,
+    Multicenter, Placebo-Controlled Study.'
+  included_by:
+  - '40886001'
+  resolved_by: reference-list
+  review: false
+  cited_as:
+    '40886001': 'GuptaPKEfficacy and safety of Stempeucel in osteoarthritis of the knee: a phase 3 randomized,
+      double-blind, multicenter, placebo-controlled studyAm J Sports Med202351225422663736616410.1177/03635465231180323Gupta
+      PK, et al. Efficacy and safety of Stempeucel in osteoarthritis of the knee: a phase 3 randomized,
+      double-blind, multicenter, placebo-controlled study. Am J Sports Med. 2023;51:2254–66.373'
+- id: MED:39874108
+  title: 'Intra-Articular Injection of Human Bone Marrow-Derived Mesenchymal Stem Cells in Knee Osteoarthritis:
+    A Randomized, Double-Blind, Controlled Trial.'
+  included_by:
+  - '40886001'
+  - '41013772'
+  resolved_by: reference-list
+  review: false
+  cited_as:
+    '41013772': 'Lee BW, Lee JJ, Jung JY, Ju JH. Intra-articular injection of human bone marrow-derived
+      mesenchymal stem cells in knee osteoarthritis: a randomized, double-blind, controlled trial. Cell
+      Transplant. 2025;34:9636897241303275.'
+    '40886001': 'Lee BW, Lee JJ, Jung JY, Ju JH. Intra-Articular Injection of Human Bone Marrow–Derived
+      Mesenchymal Stem Cells in Knee Osteoarthritis: A Randomized, Double-Blind, Controlled Trial. Cell
+      Transplant. 2025;34:09636897241303275.10.1177/09636897241303275PMC1177597839874108'
+- id: PMC:PMC7273783
+  title: 'Functional and Radiological Comparison of Umbilical Cord Mesenchymal Stem Cells, Somatotropin,
+    and Hyaluronic Acid Injection for Cartilage Repair in Early Osteoarthritis of the Knee: A Randomized
+    Controlled Trial'
+  included_by:
+  - '39360004'
+  resolved_by: europepmc-search
+  review: true
+  cited_as:
+    '39360004': 'Fiolin J., Dilogo I.H., Lubis A.M.T., Pawitan J.A., Liem I.K., Pandelaki J., et al. Functional
+      and radiological comparison of umbilical cord mesenchymal stem cells, somatotropin, and hyaluronic
+      acid injection for cartilage repair in early osteoarthritis of the knee: a randomized controlled
+      trial. Orthop J Sports Med. 2020;8(5_suppl5) doi: 10.1177/2325967120S00045.'
+unresolved:
+- meta_analysis: '33407686'
+  cited_as: Ha CZ, Li W, Ren SD, Zhou CH, Chen SF, Wang DW, et al. Effect of platelet rich plasma combined
+    with mesenchymal stem cells in treatment of knee osteoarthritis. Chin J Joint Surg (Electronic Edition)
+    2018;12(5):644–652.
+  status: unresolved
+  candidates: []
+- meta_analysis: '39360004'
+  cited_as: 'Gupta P.K., Maheshwari S., Cherian J., Goni V., Sharma A., Tripathy S.K., et al. Mesenchymal
+    stem/stromal cells: allogeneic, off the shelf, pooled, Bm - Mscs (Stempeucel®) – a potential break
+    through therapy for grade ii and Iii osteoarthritis knee. Cytotherapy. 2022;24(5):S32–S33. doi: 10.1016/S1465-3249(22)00136-0.'
+  status: unresolved
+  candidates: []
+- meta_analysis: '40407910'
+  cited_as: Schweich 2022 (2022)
+  status: unresolved
+  candidates: []
