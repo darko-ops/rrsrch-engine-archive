@@ -10,6 +10,7 @@
   rrsrch read stats                        claims, rejections by rule, coverage
   rrsrch gate "SENTENCE" CLAIM_ID [...]    check a sentence against ledger claims
   rrsrch gate-eval                         score the gate on its evaluation set
+  rrsrch bench check                       validate the benchmark against the answer key
 """
 from __future__ import annotations
 
@@ -261,6 +262,24 @@ def cmd_gate_eval(args) -> int:
     return 1 if misses else 0
 
 
+def cmd_bench_check(args) -> int:
+    from .bench import questions
+    bench = questions.load()
+    rep = questions.check(bench)
+    for p in rep.problems:
+        print(f"{p.question}: {p.detail}")
+    for q in bench["questions"]:
+        ids = rep.studies.get(q["id"], [])
+        full = sum(1 for i in ids if (snapshot.record_dir(i) / "fulltext.xml").exists())
+        if args.verbose:
+            print(f"{q['id']} [{q['kind']}] {q['question']}\n    expected: {q['expected']['verdict']}; "
+                  f"{len(q['support'])} answer-key findings; {len(ids)} corpus studies ({full} full text)")
+    print(f"{len(bench['questions'])} questions; {rep.quotes_checked} quotes found verbatim"
+          + (f", {rep.quotes_unchecked} unchecked (run rrsrch corpus fetch)" if rep.quotes_unchecked else "")
+          + f"; {len(rep.problems)} problem(s)")
+    return 1 if rep.problems else 0
+
+
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(prog="rrsrch")
     sub = p.add_subparsers(dest="group", required=True)
@@ -292,6 +311,10 @@ def main(argv: list[str] | None = None) -> int:
     ge = sub.add_parser("gate-eval", help="score the gate on its evaluation set")
     ge.add_argument("-v", "--verbose", action="store_true")
     ge.set_defaults(fn=cmd_gate_eval)
+    bench = sub.add_parser("bench").add_subparsers(dest="cmd", required=True)
+    bc = bench.add_parser("check", help="validate the benchmark against the answer key")
+    bc.add_argument("-v", "--verbose", action="store_true")
+    bc.set_defaults(fn=cmd_bench_check)
     args = p.parse_args(argv)
     return args.fn(args)
 

@@ -1,0 +1,1204 @@
+# The rrsrch v1 benchmark: questions about MSC therapy for knee osteoarthritis,
+# with expected answers taken from the eight meta-analyses in the answer key
+# (corpus/manifest.yaml).
+#
+# rrsrch never reads the meta-analyses. It answers from the studies they
+# included, and its answers are scored against these:
+#   verdict   what the evidence shows: benefit, no_difference, harm, safe,
+#             mixed (differs by outcome or comparator), contested (the
+#             meta-analyses disagree) or uncertain (too little to say).
+#   points    what a complete answer must say. Coverage is the share of
+#             points an answer makes.
+#   support   the answer-key findings behind the expected answer. Each quote
+#             is copied from its meta-analysis verbatim, and
+#             `rrsrch bench check` proves it. `effect` is what the pooled
+#             statistic shows, which is not always what the authors' words
+#             say; `note` records where they differ.
+#
+# The questions and answers were drafted from findings extracted from the
+# meta-analyses' text (tables and figures excluded) and need review by a
+# domain researcher before the numbers they produce are published.
+
+version: 1
+questions:
+
+- id: pain-12m
+  kind: efficacy
+  question: Do intra-articular MSC injections reduce knee osteoarthritis pain at 12 months compared with a control
+    treatment?
+  scope:
+    outcome:
+    - vas_pain
+    months: 12
+  expected:
+    verdict: benefit
+    answer: 'Yes. Every meta-analysis that pooled 12-month pain against a control found lower pain with MSCs, but
+      the size depends on the control: about 1 point on a 10-point VAS against placebo, about 2 against hyaluronic
+      acid, and the certainty is low to very low.'
+    points:
+    - Pain is lower with MSCs than with control at 12 months
+    - The difference against placebo is small (about 1 of 10 VAS points), below a clinically important difference
+    - The difference against hyaluronic acid is larger (about 2 of 10 VAS points)
+    - Certainty of the evidence is low or very low
+  support:
+  - meta: '33407686'
+    outcome: vas_pain
+    months: 12
+    effect: benefit
+    estimate: 'WMD = − 7.04, 95%CI: − 13.63, − 0.45, P = 0.036'
+    where: results
+    quote: '12-month: WMD = − 7.04, 95%CI: − 13.63, − 0.45, P = 0.036'
+  - meta: '39360004'
+    outcome: vas_pain
+    months: 12
+    effect: benefit
+    estimate: 1.91 lower pain VAS score (95 % CI -3.23 to -0.59; p < 0.00001)
+    certainty: very low
+    where: abstract
+    quote: Meta-analyses data showed that, compared to viscosupplementation (VS), advanced MSC therapy resulted
+      in a 1.91 lower pain VAS score (95 % CI -3.23 to -0.59; p < 0.00001) for the treatment of knee OA after 12
+      months.
+  - meta: '39360004'
+    outcome: vas_pain
+    months: 12
+    effect: benefit
+    estimate: MD ‐0.99 (95 % CI ‐1.94 to −0.03)
+    where: results
+    quote: 'In the longer-term available (period of 12 months), pooled results showed MSC was associated with lower
+      pain VAS scores: MD ‐0.99 (95 % CI ‐1.94 to −0.03).'
+  - meta: '40055739'
+    outcome: vas_pain
+    months: 12
+    effect: benefit
+    estimate: MD = 16.21, 95% CI = (7.38, 25.04), P = 0.0003
+    where: results
+    quote: MSCs significantly improved the 12-month VAS in patients with OA [MD = 16.21, 95% CI = (7.38, 25.04),
+      P = 0.0003] (Fig. 7B).
+  - meta: '40407910'
+    outcome: vas_pain
+    months: 12
+    effect: benefit
+    estimate: SMD − 0.952; 95% CI − 1.491 to − 0.413; p = 0.001, I2 = 58%
+    where: results
+    quote: The pooled estimate demonstrated significant between group differences in favour of MSC (SMD − 0.952;
+      95% CI − 1.491 to − 0.413; p = 0.001, I2 = 58%; Supplementary Fig. 4).
+  - meta: '41013772'
+    outcome: vas_pain
+    months: 12
+    effect: benefit
+    estimate: SMD = − 0.90, 95% CI − 1.57 to − 0.23; low certainty
+    certainty: low
+    where: results
+    quote: The network forest plot showed that, compared to the conventional therapy group, repeated MSC injection
+      may effectively reduce the VAS score at 12 months (SMD = − 0.90, 95% CI − 1.57 to − 0.23; low certainty) (Fig. 14E).
+  - meta: '36601089'
+    outcome: vas_pain
+    months: 12
+    effect: benefit
+    estimate: Mean difference = −26.95, 95% CI (−29.78 to −24.13); P < 0.00001
+    where: results
+    quote: A similar statistically significant reduction was seen after 12 months as well [Mean difference = −26.95,
+      95% CI (−29.78 to −24.13); P < 0.00001; Figure 4].
+
+- id: pain-6m
+  kind: efficacy
+  question: Is knee pain lower with MSCs than with control at 6 months?
+  scope:
+    outcome:
+    - vas_pain
+    months: 6
+  expected:
+    verdict: benefit
+    answer: Yes. Every pooled 6-month pain estimate in the answer key favours MSCs.
+    points:
+    - Pain is lower with MSCs than with control at 6 months
+    - The trials compare against different controls (placebo, hyaluronic acid, conventional care)
+  support:
+  - meta: '33407686'
+    outcome: vas_pain
+    months: 6
+    effect: benefit
+    estimate: 'WMD = − 3.23, 95%CI: − 5.56, − 0.90, P = 0.007'
+    where: results
+    quote: '6-month: WMD = − 3.23, 95%CI: − 5.56, − 0.90, P = 0.007'
+  - meta: '36601089'
+    outcome: vas_pain
+    months: 6
+    effect: benefit
+    estimate: Mean difference = −24.97, 95% CI (−27.54 to −22.40); p < 0.00001
+    where: results
+    quote: The pain scores showed a statistically significant reduction in the ADMSC group as compared with the
+      control after 6 months [Mean difference = −24.97, 95% CI (−27.54 to −22.40); p < 0.00001; Figure 4].
+  - meta: '40055739'
+    outcome: vas_pain
+    months: 6
+    effect: benefit
+    estimate: MD = 19.39, 95% CI = (8.10, 30.68), P = 0.0008
+    where: results
+    quote: Significant improvement in VAS was observed in OA patients treated with MSCs compared to the conventional
+      drugs [MD = 19.39, 95% CI = (8.10, 30.68), P = 0.0008] (Fig. 7A).
+  - meta: '40407910'
+    outcome: vas_pain
+    months: 6
+    effect: benefit
+    estimate: SMD − 0.767; 95% CI − 0.946 to − 0.588, p = 0.0001, I2 = 63%
+    where: results
+    quote: The pooled estimate demonstrated significant between group differences in favour of MSC (SMD − 0.767;
+      95% CI − 0.946 to − 0.588, p = 0.0001, I2 = 63%; Fig. 2).
+  - meta: '41013772'
+    outcome: vas_pain
+    months: 6
+    effect: benefit
+    estimate: SMD = − 0.77, 95% CI − 1.26 to − 0.28; low certainty
+    certainty: low
+    where: results
+    quote: Among these, repeated MSC injection significantly reduced the VAS score at 6 months compared to conventional
+      therapy (SMD = − 0.77, 95% CI − 1.26 to − 0.28; low certainty) (Fig. 14B).
+
+- id: pain-3m
+  kind: efficacy
+  question: Do MSCs reduce knee pain within the first 3 months?
+  scope:
+    outcome:
+    - vas_pain
+    months: 3
+  expected:
+    verdict: contested
+    answer: The meta-analyses disagree. One found no significant difference at 3 months (VAS WMD -1.13, p = 0.097);
+      another, pooling against other injectable biologics, found a significant reduction.
+    points:
+    - Evidence at 3 months is split
+    - At least one pooled analysis found no significant pain difference at 3 months
+    - At least one found lower pain with MSCs at 3 months
+  support:
+  - meta: '33407686'
+    outcome: vas_pain
+    months: 3
+    effect: no_difference
+    estimate: 'WMD = − 1.13, 95%CI: − 2.46, 0.20, P = 0.097'
+    where: results
+    quote: '3 month: WMD = − 1.13, 95%CI: − 2.46, 0.20, P = 0.097'
+  - meta: '40407910'
+    outcome: vas_pain
+    months: 3
+    effect: benefit
+    estimate: SMD − 0.526; 95% CI − 0.713 to − 0.339, p = 0.0001, I2 = 64%
+    where: results
+    quote: The pooled estimate demonstrated significant between group differences in favour of MSC (SMD − 0.526;
+      95% CI − 0.713 to − 0.339, p = 0.0001, I2 = 64%; Fig. 1).
+
+- id: durability-24m
+  kind: durability
+  question: Does the benefit of MSC injection last to 24 months?
+  scope:
+    months: 24
+  expected:
+    verdict: uncertain
+    answer: 'Unclear. Only one meta-analysis pooled 24-month results against control: pain favoured MSCs, but IKDC
+      function did not differ. Most trials stop at 12 months.'
+    points:
+    - Few trials follow patients beyond 12 months
+    - One pooled 24-month pain result favours MSCs
+    - Function (IKDC) at 24 months did not differ from control
+  support:
+  - meta: '33407686'
+    outcome: vas_pain
+    months: 24
+    effect: benefit
+    estimate: 'WMD = − 24.98, 95%CI: − 35.01, − 14.96, P < 0.001'
+    where: results
+    quote: '24-month: WMD = − 24.98, 95%CI: − 35.01, − 14.96, P < 0.001'
+    note: The 24-month WMD of -24.98 is far larger than the 12-month -7.04, which suggests 0-10 and 0-100 VAS scales
+      were pooled as raw differences.
+  - meta: '33407686'
+    outcome: ikdc
+    months: 24
+    effect: no_difference
+    estimate: 'WMD = 5.24, 95%CI: − 0.92, 11.40, P = 0.095'
+    where: results
+    quote: '24-month: WMD = 5.24, 95%CI: − 0.92, 11.40, P = 0.095'
+
+- id: function-12m
+  kind: efficacy
+  question: Do MSCs improve knee function at 12 months compared with control?
+  scope:
+    outcome:
+    - womac_function
+    months: 12
+  expected:
+    verdict: contested
+    answer: The meta-analyses disagree. Two found better WOMAC function at 12 months; two found no significant difference.
+      Function improves less consistently than pain.
+    points:
+    - Evidence on 12-month function is split
+    - Some pooled analyses found better WOMAC function with MSCs
+    - Others found no significant function difference
+    - Function benefit is less consistent than pain benefit
+  support:
+  - meta: '33407686'
+    outcome: womac_function
+    months: 12
+    effect: benefit
+    estimate: 'WMD = − 8.32, 95%CI: − 15.63, − 1.01, P = 0.026'
+    where: results
+    quote: '12-month: WMD = − 8.32, 95%CI: − 15.63, − 1.01, P = 0.026'
+  - meta: '41013772'
+    outcome: womac_function
+    months: 12
+    effect: benefit
+    estimate: SMD = − 0.30, 95% CI − 0.59 to − 0.01; low certainty
+    certainty: low
+    where: results
+    quote: The network forest plot showed that, compared to the conventional therapy group, repeated MSC injection
+      may effectively reduce the WOMAC score (Function) at 12 months (SMD = − 0.30, 95% CI − 0.59 to − 0.01; low
+      certainty) (Fig. 11E).
+  - meta: '40055739'
+    outcome: womac_function
+    months: 12
+    effect: no_difference
+    estimate: MD = 0.82, 95% CI = (-4.33, 5.97), P = 0.76
+    where: results
+    quote: There was no significant difference between the two groups [MD = 0.82, 95% CI = (-4.33, 5.97), P = 0.76]
+      (Fig. 4C).
+  - meta: '40407910'
+    outcome: womac_function
+    months: 12
+    effect: no_difference
+    estimate: SMD 0.117, 95% CI − 0.214 to 0.448; p = 0.488, I2 = 0%
+    where: results
+    quote: The pooled estimate did not demonstrate significant between group differences (SMD 0.117, 95% CI − 0.214
+      to 0.448; p = 0.488, I2 = 0%; Supplementary Fig. 22).
+
+- id: womac-12m
+  kind: efficacy
+  question: Is the total WOMAC score better with MSCs than with control at 12 months?
+  scope:
+    outcome:
+    - womac
+    months: 12
+  expected:
+    verdict: contested
+    answer: 'The meta-analyses disagree: three found significantly better WOMAC totals, while three found no difference,
+      including the comparison against placebo.'
+    points:
+    - Evidence on 12-month WOMAC total is split
+    - Against placebo, WOMAC total did not differ
+    - Several pooled analyses against mixed controls found better WOMAC with MSCs
+  support:
+  - meta: '40055739'
+    outcome: womac
+    months: 12
+    effect: benefit
+    estimate: MD = 10.31, 95% CI = (0.96, 19.67), P = 0.03
+    where: results
+    quote: Improvement in total WOMAC was significantly higher in the MSCs treatment group than in the control group
+      [MD = 10.31, 95% CI = (0.96, 19.67), P = 0.03] (Fig. 4D).
+  - meta: '40886001'
+    outcome: womac
+    months: 12
+    effect: benefit
+    estimate: 'SMD = –1.35, 95% CI: –1.97 to –0.74, p = 0.002'
+    where: results
+    quote: 'The meta-analysis of eight randomized controlled trials demonstrated a significant improvement in WOMAC
+      scores at 12-month follow-up among patients receiving intra-articular MSC injections compared to controls
+      (SMD = –1.35, 95% CI: –1.97 to –0.74, p = 0.002), as shown in Fig. 2.'
+  - meta: '36601089'
+    outcome: womac
+    months: 12
+    effect: benefit
+    estimate: Mean difference = −20.34, 95% CI (−23.41 to −17.28); p < 0.00001
+    where: results
+    quote: Same statistically significant reduction was seen after 12 months as well [Mean difference = −20.34,
+      95% CI (−23.41 to −17.28); p < 0.00001; Figure 3]. Pooled studies were heterogeneous (p < 0.00001; I2 = 97%).
+  - meta: '33407686'
+    outcome: womac
+    months: 12
+    effect: no_difference
+    estimate: 'WMD = − 1.56, 95%CI: − 9.78, 6.66, P = 0.710'
+    where: results
+    quote: '12-month: WMD = − 1.56, 95%CI: − 9.78, 6.66, P = 0.710'
+  - meta: '40407910'
+    outcome: womac
+    months: 12
+    effect: no_difference
+    estimate: SMD − 0.537, 95% CI − 1.460 to 0.385, p = 0.253, I2 = 86%
+    where: results
+    quote: The pooled estimate did not demonstrate between group differences (SMD − 0.537, 95% CI − 1.460 to 0.385,
+      p = 0.253, I2 = 86%; Fig. 15).
+  - meta: '39360004'
+    outcome: womac
+    months: 12
+    effect: no_difference
+    estimate: MD ‐0.02 (95 % CI ‐0.86 to 0.81)
+    where: results
+    quote: In the longer-term available (12 months), pooled results showed a MD ‐0.02 (95 % CI ‐0.86 to 0.81) [81].
+
+- id: pain-vs-function
+  kind: efficacy
+  question: Does the pain relief from MSCs come with better knee function?
+  scope:
+    outcome:
+    - vas_pain
+    - womac_function
+  expected:
+    verdict: mixed
+    answer: Not clearly. Against other injectable treatments, MSCs reduced pain at every time point but WOMAC function,
+      stiffness and most KOOS subscales did not differ.
+    points:
+    - Pain improves more consistently than function
+    - Function scores often show no difference from control even when pain does
+    - Pain relief does not by itself show better knee function
+  support:
+  - meta: '40407910'
+    outcome: vas_pain
+    months: 12
+    effect: benefit
+    estimate: SMD − 0.952; 95% CI − 1.491 to − 0.413; p = 0.001, I2 = 58%
+    where: results
+    quote: The pooled estimate demonstrated significant between group differences in favour of MSC (SMD − 0.952;
+      95% CI − 1.491 to − 0.413; p = 0.001, I2 = 58%; Supplementary Fig. 4).
+  - meta: '40407910'
+    outcome: womac_function
+    months: 12
+    effect: no_difference
+    estimate: SMD 0.117, 95% CI − 0.214 to 0.448; p = 0.488, I2 = 0%
+    where: results
+    quote: The pooled estimate did not demonstrate significant between group differences (SMD 0.117, 95% CI − 0.214
+      to 0.448; p = 0.488, I2 = 0%; Supplementary Fig. 22).
+  - meta: '40407910'
+    outcome: other
+    months: null
+    effect: no_difference
+    where: conclusion
+    quote: These differences were not reflected in clinical and functional outcomes, indicating that the observed
+      reduction in pain did not correspond to substantial improvements in knee functionality.
+  - meta: '40407910'
+    outcome: other
+    months: null
+    effect: mixed
+    where: conclusion
+    quote: The results of this meta-analysis demonstrated a significant effect of adipose and bone marrow-derived
+      stromal cell (MSC) injections on pain reduction at all assessed time points, and MSC injections showed superiority
+      over other non-surgical treatment options.
+
+- id: koos
+  kind: efficacy
+  question: Which KOOS subscales improve with MSCs compared with control?
+  scope:
+    outcome:
+    - koos
+  expected:
+    verdict: mixed
+    answer: Only symptoms improved significantly (at 3 and 6 months). KOOS pain was near but not at significance,
+      and ADL, sport and quality of life did not differ.
+    points:
+    - KOOS symptoms improved at 3 and 6 months
+    - KOOS pain did not reach significance
+    - KOOS ADL, sport and quality of life did not differ
+  support:
+  - meta: '40407910'
+    outcome: koos_symptoms
+    months: 3
+    effect: benefit
+    estimate: SMD − 0.835, 95% CI − 1.594 to − 0.076, p = 0.031, I2 = 512%
+    where: results
+    quote: The pooled estimate demonstrated significant between group differences in favor of MSC (SMD − 0.835,
+      95% CI − 1.594 to − 0.076, p = 0.031, I2 = 512%; Fig. 5).
+  - meta: '40407910'
+    outcome: koos_symptoms
+    months: 6
+    effect: benefit
+    estimate: SMD − 0.848, 95% CI − 1.677 to − 0.019, p = 0.045, I2 = 47%
+    where: results
+    quote: The pooled estimate demonstrated significant between group differences in favor of MSC (SMD − 0.848,
+      95% CI − 1.677 to − 0.019, p = 0.045, I2 = 47%; Fig. 6).
+  - meta: '40407910'
+    outcome: koos_pain
+    months: 3
+    effect: no_difference
+    estimate: SMD − 0.592, 95% CI − 1.467 to 0.283 p = 0.185, I2 = 42%
+    where: results
+    quote: The pooled estimate demonstrated non-significant between group differences but favored MSC (SMD − 0.592,
+      95% CI − 1.467 to 0.283 p = 0.185, I2 = 42%; Fig. 3).
+    note: The abstract reports KOOS pain as significant at 3 and 6 months; the results give p = 0.185 and p = 0.051.
+  - meta: '40407910'
+    outcome: koos_pain
+    months: 6
+    effect: no_difference
+    estimate: SMD − 0.543, 95% CI − 1.087 to 0.001, p = 0.051, I2 = 42%
+    where: results
+    quote: The pooled estimate demonstrated near significant between group differences in favor of MSC (SMD − 0.543,
+      95% CI − 1.087 to 0.001, p = 0.051, I2 = 42%; Fig. 4).
+  - meta: '40407910'
+    outcome: koos_qol
+    months: 6
+    effect: no_difference
+    estimate: SMD − 1.112, 95% CI − 2.363 to 0.140, p = 0.082, I2 = 95%
+    where: results
+    quote: The pooled estimate did not demonstrate significant between group differences (SMD − 1.112, 95% CI − 2.363
+      to 0.140, p = 0.082, I2 = 95%; (Fig. 12).
+
+- id: quality-of-life
+  kind: efficacy
+  question: Does MSC treatment improve quality of life?
+  scope:
+    outcome:
+    - sf36
+    - koos
+  expected:
+    verdict: contested
+    answer: 'The two meta-analyses that pooled it disagree: one (adipose-derived MSCs, composite of KOOS QoL and
+      SF-36) found improvement at 12 months; the other found no significant difference in KOOS quality of life.'
+    points:
+    - Evidence on quality of life is split
+    - Only a few trials report quality of life
+  support:
+  - meta: '36601089'
+    outcome: koos_qol
+    months: 12
+    effect: benefit
+    estimate: Mean difference = −10.71, 95% CI (−12.85 to −8.58); p < 0.00001
+    where: results
+    quote: A similar statistically significant reduction was seen after 12 months as well [Mean difference = −10.71,
+      95% CI (−12.85 to −8.58); p < 0.00001; Figure 7].
+    note: Composite of KOOS QoL and SF-36 rescaled; 2 studies.
+  - meta: '40407910'
+    outcome: koos_qol
+    months: 6
+    effect: no_difference
+    estimate: SMD − 1.112, 95% CI − 2.363 to 0.140, p = 0.082, I2 = 95%
+    where: results
+    quote: The pooled estimate did not demonstrate significant between group differences (SMD − 1.112, 95% CI − 2.363
+      to 0.140, p = 0.082, I2 = 95%; (Fig. 12).
+
+- id: ikdc
+  kind: efficacy
+  question: Do MSCs improve IKDC scores compared with control?
+  scope:
+    outcome:
+    - ikdc
+  expected:
+    verdict: no_difference
+    answer: No. IKDC did not differ significantly from control at 6, 12, 18 or 24 months.
+    points:
+    - IKDC did not differ from control at any reported time point
+  support:
+  - meta: '33407686'
+    outcome: ikdc
+    months: 12
+    effect: no_difference
+    estimate: 'WMD = 3.92, 95%CI: − 6.49, 14.33, P = 0.461'
+    where: results
+    quote: '12-month: WMD = 3.92, 95%CI: − 6.49, 14.33, P = 0.461'
+  - meta: '33407686'
+    outcome: ikdc
+    months: 24
+    effect: no_difference
+    estimate: 'WMD = 5.24, 95%CI: − 0.92, 11.40, P = 0.095'
+    where: results
+    quote: '24-month: WMD = 5.24, 95%CI: − 0.92, 11.40, P = 0.095'
+
+- id: vs-placebo
+  kind: comparator
+  question: How do MSCs compare with placebo injection?
+  scope:
+    comparator:
+    - placebo
+    months: 12
+  expected:
+    verdict: mixed
+    answer: Against placebo, 12-month pain was slightly lower (about 1 point on a 10-point VAS, below a clinically
+      important difference, very low certainty) and WOMAC did not differ.
+    points:
+    - Pain is slightly lower than placebo at 12 months
+    - The pain difference is below a clinically important difference
+    - WOMAC does not differ from placebo
+    - Certainty is very low
+  support:
+  - meta: '39360004'
+    outcome: vas_pain
+    months: 12
+    effect: benefit
+    estimate: 0.99 lower pain VAS points (95 % CI -1.94 to -0.03; p = 0.76)
+    certainty: very low
+    where: abstract
+    quote: Compared to placebo, the difference was 0.99 lower pain VAS points (95 % CI -1.94 to -0.03; p = 0.76).
+      According to the GRADE approach, the evidence was very uncertain for both comparisons.
+    note: The abstract p = 0.76 contradicts its own CI (-1.94 to -0.03); it is likely the heterogeneity p.
+  - meta: '39360004'
+    outcome: vas_pain
+    months: 12
+    effect: benefit
+    estimate: MD ‐0.99 (95 % CI ‐1.94 to −0.03)
+    where: results
+    quote: 'In the longer-term available (period of 12 months), pooled results showed MSC was associated with lower
+      pain VAS scores: MD ‐0.99 (95 % CI ‐1.94 to −0.03).'
+  - meta: '39360004'
+    outcome: womac
+    months: 12
+    effect: no_difference
+    estimate: MD ‐0.02 (95 % CI ‐0.86 to 0.81)
+    where: results
+    quote: In the longer-term available (12 months), pooled results showed a MD ‐0.02 (95 % CI ‐0.86 to 0.81) [81].
+
+- id: vs-hyaluronic-acid
+  kind: comparator
+  question: Are MSCs better than hyaluronic acid injection?
+  scope:
+    comparator:
+    - hyaluronic_acid
+    months: 12
+  expected:
+    verdict: benefit
+    answer: Probably, for pain. At 12 months VAS pain was about 1.5 to 2 points lower and WOMAC about 7 to 8 points
+      lower than with viscosupplementation. Excluding high risk-of-bias trials raised the pain finding to moderate
+      certainty; the WOMAC difference is below a clinically important difference.
+    points:
+    - Pain is lower with MSCs than with hyaluronic acid at 12 months
+    - Excluding high risk-of-bias trials, the pain benefit holds with moderate certainty
+    - The WOMAC difference is below a clinically important difference
+  support:
+  - meta: '39360004'
+    outcome: vas_pain
+    months: 12
+    effect: benefit
+    estimate: MD ‐1.91 (95 % CI ‐3.23 to −0.59)
+    where: results
+    quote: 'In the longer-term available (period of 12 months), pooled results showed MSC was associated with lower
+      pain VAS scores: MD ‐1.91 (95 % CI ‐3.23 to −0.59).'
+  - meta: '39360004'
+    outcome: womac
+    months: 12
+    effect: benefit
+    estimate: MD ‐7.70 (95 % CI ‐13.08 to −2.32)
+    where: results
+    quote: 'In the longer-term available (period of 12 months), pooled results showed MSC was associated with lower
+      WOMAC scores: MD ‐7.70 (95 % CI ‐13.08 to −2.32).'
+  - meta: '39360004'
+    outcome: vas_pain
+    months: 12
+    effect: benefit
+    estimate: MD ‐1.54 (95 % CI ‐2.09 to −0.98)
+    certainty: moderate
+    where: results
+    quote: 'Pain (VAS): 12 months period: MD ‐1.54 (95 % CI ‐2.09 to −0.98).'
+  - meta: '39360004'
+    outcome: vas_pain
+    months: 12
+    effect: benefit
+    estimate: 1.91 lower; MCID 1.1 to 2/10
+    where: discussion
+    quote: Advanced MSC therapy was better than viscosupplementation to reduce pain and improve function of knee
+      OA after 12 months. The difference of VAS pain (1.91 lower) is considered to be clinically perceptible, as
+      it achieved the aimed minimal clinically important difference (MCID from 1.1 to 2/10) [82].
+  - meta: '39360004'
+    outcome: womac
+    months: 12
+    effect: benefit
+    where: discussion
+    quote: The same wasn't observed with WOMAC [83,81].
+
+- id: vs-other-biologics
+  kind: comparator
+  question: Are MSC injections better than other injectable treatments such as PRP, hyaluronic acid or corticosteroids?
+  scope:
+    comparator:
+    - prp
+    - hyaluronic_acid
+    - corticosteroid
+  expected:
+    verdict: mixed
+    answer: 'For pain, yes: VAS favoured MSCs at 3, 6 and 12 months. For function, no: WOMAC and most KOOS subscales
+      did not differ. Publication bias was detected in this body of evidence.'
+    points:
+    - Pain favours MSCs over other injectables
+    - Function does not differ
+    - Publication bias was detected
+  support:
+  - meta: '40407910'
+    outcome: vas_pain
+    months: 3
+    effect: benefit
+    estimate: SMD − 0.526; 95% CI − 0.713 to − 0.339, p = 0.0001, I2 = 64%
+    where: results
+    quote: The pooled estimate demonstrated significant between group differences in favour of MSC (SMD − 0.526;
+      95% CI − 0.713 to − 0.339, p = 0.0001, I2 = 64%; Fig. 1).
+  - meta: '40407910'
+    outcome: vas_pain
+    months: 12
+    effect: benefit
+    estimate: SMD − 0.952; 95% CI − 1.491 to − 0.413; p = 0.001, I2 = 58%
+    where: results
+    quote: The pooled estimate demonstrated significant between group differences in favour of MSC (SMD − 0.952;
+      95% CI − 1.491 to − 0.413; p = 0.001, I2 = 58%; Supplementary Fig. 4).
+  - meta: '40407910'
+    outcome: womac_function
+    months: 12
+    effect: no_difference
+    estimate: SMD 0.117, 95% CI − 0.214 to 0.448; p = 0.488, I2 = 0%
+    where: results
+    quote: The pooled estimate did not demonstrate significant between group differences (SMD 0.117, 95% CI − 0.214
+      to 0.448; p = 0.488, I2 = 0%; Supplementary Fig. 22).
+  - meta: '40407910'
+    outcome: publication_bias
+    months: null
+    effect: bias
+    estimate: intercept of 3.26447 with a t-value of 3.75116 and a p value of 0.00716
+    where: results
+    quote: This finding is corroborated by Egger's regression test, which yielded an intercept of 3.26447 with a
+      t-value of 3.75116 and a p value of 0.00716.
+
+- id: adverse-events
+  kind: safety
+  question: Do MSC injections cause more adverse events than control treatments?
+  scope:
+    outcome:
+    - adverse_events
+  expected:
+    verdict: contested
+    answer: The meta-analyses disagree. Three comparisons found no difference in adverse events (against placebo,
+      hyaluronic acid, or mixed controls); one found MSC injection raised the odds of adverse events about six-fold
+      against conventional therapy (low certainty).
+    points:
+    - Evidence on adverse events is split
+    - Several pooled comparisons found no difference
+    - One found substantially more adverse events with MSCs
+  support:
+  - meta: '39360004'
+    outcome: adverse_events
+    months: 12
+    effect: no_difference
+    estimate: RR 1.20 (95 % CI 0.81 to 1.79)
+    where: results
+    quote: 'In the longer-term available (period of 12 months), pooled results showed no differences regarding any
+      adverse events: RR 1.20 (95 % CI 0.81 to 1.79).'
+  - meta: '39360004'
+    outcome: adverse_events
+    months: 12
+    effect: no_difference
+    estimate: RR 0.85, 95 % (CI 0.48 to 1.49)
+    where: results
+    quote: 'In the longer-term available (period of 12 months), pooled results showed no differences regarding any
+      adverse events: RR 0.85, 95 % (CI 0.48 to 1.49).'
+  - meta: '40055739'
+    outcome: adverse_events
+    months: null
+    effect: no_difference
+    estimate: MD = 1.32, 95% CI = (0.85, 2.05), P = 0.21
+    where: results
+    quote: The results showed that for AEs [MD = 1.32, 95% CI = (0.85, 2.05), P = 0.21] (Fig. 8A) and SAEs [MD = 0.78,
+      95% CI = (0.23, 2.65), P = 0.69] (Fig. 8B), there was no statistically significant difference between the
+      two groups.
+  - meta: '41013772'
+    outcome: adverse_events
+    months: null
+    effect: harm
+    estimate: OR = 5.72, 95% CI 2.52 to 13.01, P < 0.0001; low certainty
+    certainty: low
+    where: results
+    quote: The pooled analysis showed that, compared to conventional therapy, both single and repeated MSC injections
+      significantly increased the incidence of adverse events (OR = 5.72, 95% CI 2.52 to 13.01, P < 0.0001; low
+      certainty) (I² = 48%) (Fig. 15A).
+
+- id: serious-adverse-events
+  kind: safety
+  question: Are serious adverse events more common after MSC injection?
+  scope:
+    outcome:
+    - adverse_events
+  expected:
+    verdict: no_difference
+    answer: No difference was found, but serious events are rare and the estimates are very imprecise (for example
+      RR 0.80, 95% CI 0.10 to 6.59).
+    points:
+    - No difference in serious adverse events
+    - Serious events are rare, so estimates are imprecise
+    - Certainty is very low
+  support:
+  - meta: '39360004'
+    outcome: serious_adverse_events
+    months: 12
+    effect: no_difference
+    estimate: RR 0.80 (95 % CI 0.10 to 6.59)
+    where: results
+    quote: 'In the longer-term available (period of 12 months), pooled results showed no differences regarding serious
+      adverse events: RR 0.80 (95 % CI 0.10 to 6.59).'
+  - meta: '40055739'
+    outcome: serious_adverse_events
+    months: null
+    effect: no_difference
+    estimate: MD = 0.78, 95% CI = (0.23, 2.65), P = 0.69
+    where: results
+    quote: The results showed that for AEs [MD = 1.32, 95% CI = (0.85, 2.05), P = 0.21] (Fig. 8A) and SAEs [MD = 0.78,
+      95% CI = (0.23, 2.65), P = 0.69] (Fig. 8B), there was no statistically significant difference between the
+      two groups.
+  - meta: '41013772'
+    outcome: serious_adverse_events
+    months: null
+    effect: no_difference
+    estimate: OR = 2.13, 95% CI 0.56 to 8.01, P = 0.26
+    where: results
+    quote: The pooled analysis showed that, compared to conventional therapy, neither single nor repeated MSC injections
+      reduced the incidence of serious adverse events (OR = 2.13, 95% CI 0.56 to 8.01, P = 0.26) (Fig. 15B).
+
+- id: repeated-vs-single
+  kind: frequency
+  question: Are repeated MSC injections more effective than a single injection?
+  expected:
+    verdict: contested
+    answer: Unsettled, even within the one meta-analysis that asked. Its network analysis found better WOMAC function
+      at 6 months and WOMAC total at 12 months with repeated injections (low and very low certainty); its direct
+      subgroup tests found no difference for any outcome.
+    points:
+    - Evidence is limited to one meta-analysis
+    - Indirect (network) comparisons favour repeated injection for some outcomes
+    - Direct subgroup comparisons found no difference
+    - Certainty is low to very low
+  support:
+  - meta: '41013772'
+    outcome: womac
+    months: 12
+    effect: benefit
+    estimate: SMD = −1.47, 95% CI − 2.86 to − 0.07; very low certainty
+    certainty: very low
+    where: results
+    quote: The network forest plot showed that, compared to single MSC injection, repeated MSC injection may effectively
+      reduce the WOMAC total score at 12 months (SMD = −1.47, 95% CI − 2.86 to − 0.07; very low certainty) (Fig. 10E).
+  - meta: '41013772'
+    outcome: womac_function
+    months: 6
+    effect: benefit
+    estimate: SMD = − 1.24, 95% CI − 2.33 to − 0.15; low certainty
+    certainty: low
+    where: results
+    quote: Among these, repeated MSC injection significantly reduced the WOMAC score (Function) at 6 months compared
+      to single MSC injection (SMD = − 1.24, 95% CI − 2.33 to − 0.15; low certainty) (Fig. 11B).
+  - meta: '41013772'
+    outcome: womac
+    months: 12
+    effect: no_difference
+    estimate: P = 0.67
+    where: results
+    quote: Additionally, the pooled results indicated no significant difference in improvement between single and
+      repeated injections (P = 0.67).
+  - meta: '41013772'
+    outcome: vas_pain
+    months: 12
+    effect: no_difference
+    estimate: P = 0.41
+    where: results
+    quote: Furthermore, the pooled results also indicated no significant difference between the effects of single
+      and multiple injections on the improvement of the VAS score (P = 0.41).
+
+- id: repeated-safety
+  kind: frequency
+  question: Do repeated MSC injections cause more adverse events than a single injection?
+  scope:
+    outcome:
+    - adverse_events
+  expected:
+    verdict: contested
+    answer: The meta-analysis contradicts itself. Its abstract says repeated injections had more adverse events;
+      its direct comparison found no difference (P = 0.95), and its discussion says repeated injections did not
+      show higher rates.
+    points:
+    - The direct comparison found no difference in adverse events
+    - The higher adverse-event claim rests on comparisons against conventional therapy, not against single injection
+  support:
+  - meta: '41013772'
+    outcome: adverse_events
+    months: null
+    effect: harm
+    where: abstract
+    quote: However, repeated MSC injections were also associated with a higher incidence of adverse events.
+  - meta: '41013772'
+    outcome: adverse_events
+    months: null
+    effect: no_difference
+    estimate: P = 0.95
+    where: results
+    quote: Furthermore, the pooled results also indicated no significant difference in the incidence of adverse
+      events between the different injection protocols (P = 0.95).
+  - meta: '41013772'
+    outcome: adverse_events
+    months: null
+    effect: no_difference
+    where: discussion
+    quote: Moreover, while prior meta-analyses pointed to a dose-dependent increase in AEs [25], our study found
+      that repeated MSC injections improved KOA outcomes without showing higher rates of AEs or SAEs compared to
+      single injections.
+  - meta: '41013772'
+    outcome: adverse_events
+    months: null
+    effect: harm
+    estimate: OR = 6.86, 95% CI 2.62 to 17.97; very low certainty
+    certainty: very low
+    where: results
+    quote: The network forest plot indicates that, compared to the conventional therapy group, repeated MSC injections
+      may increase the incidence of adverse events (OR = 6.86, 95% CI 2.62 to 17.97; very low certainty) (Fig. 16B).
+
+- id: dose
+  kind: dose
+  question: Does a higher MSC dose work better?
+  expected:
+    verdict: no_difference
+    answer: No dose-response was shown. Dose subgroups and meta-regressions found no significant difference; one
+      meta-analysis found both high- and low-dose groups improved over control without testing them against each
+      other.
+    points:
+    - No significant dose-response relationship
+    - Low doses (25 million cells or fewer) improved WOMAC
+    - Higher doses showed no significant additional benefit
+  support:
+  - meta: '39629035'
+    outcome: womac
+    months: 12
+    effect: no_difference
+    estimate: Q (3) =0.74, P = 0.86
+    where: results
+    quote: Figure 2a Q (3) =0.74, P = 0.86, and the Chi-square test (test of group difference) indicates that there
+      was no statistically significant difference between the four groups (low, medium, high dose, and unknown dose).
+  - meta: '40886001'
+    outcome: womac
+    months: 12
+    effect: no_difference
+    estimate: 'β = –0.310, 95% CI: –1.552 to 0.932, p = 0.564'
+    where: results
+    quote: 'In contrast, doses > 25 million cells did not result in a statistically significant difference in effect
+      compared to lower doses (β = –0.310, 95% CI: –1.552 to 0.932, p = 0.564).'
+  - meta: '40886001'
+    outcome: womac
+    months: 12
+    effect: benefit
+    estimate: 'SMD = –1.165, 95% CI: –2.110 to –0.220, p = 0.023'
+    where: results
+    quote: 'Meta-regression analysis indicated that MSC injections with doses of ≤ 25 million cells significantly
+      improved WOMAC scores at 12 months (SMD = –1.165, 95% CI: –2.110 to –0.220, p = 0.023), as shown in Table 4.'
+  - meta: '40055739'
+    outcome: womac
+    months: 12
+    effect: benefit
+    estimate: 'high dose: MD = 14.25; 95%CI= (7.44,21.07); P < 0.0001'
+    where: results
+    quote: Subgroup analyses showed significant improvements in 12 M-WOMAC in both high-dose [MD = 14.25; 95%CI=
+      (7.44,21.07); P < 0.0001] and low-dose groups [MD = 4.84; 95%CI= (0.45, 9.24); P = 0.03] compared to the control
+      group (Fig. 5B).
+  - meta: '33407686'
+    outcome: vas_pain
+    months: null
+    effect: no_difference
+    where: results
+    quote: Results indicated that none of these variables significantly predicted the effects of MSCs on the VAS
+      score.
+
+- id: cell-source
+  kind: cell_source
+  question: Do adipose-derived MSCs work better than bone marrow-derived MSCs?
+  scope:
+    cell_type:
+    - ad_msc
+    - bm_msc
+  expected:
+    verdict: uncertain
+    answer: Not established. In one meta-analysis the adipose subgroup improved WOMAC significantly and the bone
+      marrow subgroup did not, but the subgroups were not tested against each other; another found source unrelated
+      to WOMAC and VAS effects.
+    points:
+    - Adipose-derived subgroups showed significant WOMAC improvement
+    - Bone marrow-derived subgroups did not reach significance
+    - No direct comparison between sources shows a difference
+  support:
+  - meta: '40055739'
+    outcome: womac
+    months: 12
+    effect: benefit
+    estimate: 'ADMSCs: MD = 8.76; 95%CI= (4.35, 13.16); P < 0.0001'
+    where: results
+    quote: Subgroup analysis showed significant improvement in 12 M-WOMAC in the ADMSCs group [MD = 8.76; 95%CI=
+      (4.35, 13.16); P < 0.0001] compared to the control group, whereas there was no significant improvement in
+      the BM-MSCs group [MD = 6.00; 95%CI= (-3.32,15.31); P = 0.21] (Fig. 6B).
+  - meta: '40055739'
+    outcome: womac
+    months: 12
+    effect: no_difference
+    estimate: 'BM-MSCs: MD = 6.00; 95%CI= (-3.32,15.31); P = 0.21'
+    where: results
+    quote: Subgroup analysis showed significant improvement in 12 M-WOMAC in the ADMSCs group [MD = 8.76; 95%CI=
+      (4.35, 13.16); P < 0.0001] compared to the control group, whereas there was no significant improvement in
+      the BM-MSCs group [MD = 6.00; 95%CI= (-3.32,15.31); P = 0.21] (Fig. 6B).
+  - meta: '40055739'
+    outcome: womac
+    months: 6
+    effect: benefit
+    estimate: 'ADMSCs: MD = 7.53; 95%CI= (4.42,10.63); P < 0.00001'
+    where: results
+    quote: Subgroup analysis showed that 6 M-WOMAC was significantly improved in the ADMSCs group [MD = 7.53; 95%CI=
+      (4.42,10.63); P < 0.00001] compared to the control group, while no significant improvement was observed in
+      the BM-MSCs group [MD=-6.30; 95%CI= (-17.45, 4.85); P = 0.27] (Fig. 6A).
+  - meta: '39629035'
+    outcome: other
+    months: null
+    effect: mixed
+    estimate: WOMAC/VAS P > 0.05; KSS 1 year P < 0.05
+    where: results
+    quote: Multivariate meta-regression showed that according to WOMAC and VAS indexes, there was no significant
+      association between dose and source MSCs with efficacy MSCs (P > 0.05, [Table 4]), but according to KSS, after
+      1 year source of MSCs an affected MSCs efficacy (P < 0.05, [Table 4]).
+
+- id: adipose
+  kind: cell_source
+  question: Do adipose-derived MSCs improve knee osteoarthritis symptoms compared with control?
+  scope:
+    cell_type:
+    - ad_msc
+  expected:
+    verdict: benefit
+    answer: 'Yes, in the pooled trials: WOMAC, pain, stiffness and function favoured adipose-derived MSCs at 6 and
+      12 months. The evidence is small (4 trials, 138 patients) and very heterogeneous.'
+    points:
+    - WOMAC and pain favour adipose-derived MSCs at 6 and 12 months
+    - The evidence comes from few trials and patients
+    - Heterogeneity is very high
+  support:
+  - meta: '36601089'
+    outcome: womac
+    months: 12
+    effect: benefit
+    estimate: Mean difference = −20.34, 95% CI (−23.41 to −17.28); p < 0.00001
+    where: results
+    quote: Same statistically significant reduction was seen after 12 months as well [Mean difference = −20.34,
+      95% CI (−23.41 to −17.28); p < 0.00001; Figure 3]. Pooled studies were heterogeneous (p < 0.00001; I2 = 97%).
+  - meta: '36601089'
+    outcome: vas_pain
+    months: 12
+    effect: benefit
+    estimate: Mean difference = −26.95, 95% CI (−29.78 to −24.13); P < 0.00001
+    where: results
+    quote: A similar statistically significant reduction was seen after 12 months as well [Mean difference = −26.95,
+      95% CI (−29.78 to −24.13); P < 0.00001; Figure 4].
+  - meta: '40055739'
+    outcome: womac
+    months: 12
+    effect: benefit
+    estimate: 'ADMSCs: MD = 8.76; 95%CI= (4.35, 13.16); P < 0.0001'
+    where: results
+    quote: Subgroup analysis showed significant improvement in 12 M-WOMAC in the ADMSCs group [MD = 8.76; 95%CI=
+      (4.35, 13.16); P < 0.0001] compared to the control group, whereas there was no significant improvement in
+      the BM-MSCs group [MD = 6.00; 95%CI= (-3.32,15.31); P = 0.21] (Fig. 6B).
+
+- id: cartilage
+  kind: structure
+  question: Do MSC injections regenerate cartilage?
+  scope:
+    outcome:
+    - cartilage_imaging
+  expected:
+    verdict: uncertain
+    answer: Not shown. One meta-analysis found no change in WORMS cartilage scores after injection; another reports
+      MRI improvements in individual trials but concludes that current RCTs cannot establish regeneration.
+    points:
+    - No pooled imaging result shows cartilage regeneration
+    - Some individual trials report MRI improvement
+    - Structural benefit is not established
+  support:
+  - meta: '41013772'
+    outcome: worms
+    months: null
+    effect: no_difference
+    estimate: SMD = 0.11, 95% CI − 0.16 to 0.39, P = 0.42; I² = 0%
+    where: results
+    quote: The results showed that, compared to pre-treatment levels, the WORMS score (articular cartilage) did
+      not significantly improve after a single MSC injection (SMD = 0.11, 95% CI − 0.16 to 0.39, P = 0.42; I² =
+      0%) (Fig. 9).
+  - meta: '36601089'
+    outcome: cartilage_imaging
+    months: null
+    effect: benefit
+    where: results
+    quote: The MRI cartilage integrity was reported as either a change in the cartilage defect or a change in cartilage
+      volume showing a clinically significant improvement in the ADMSC group as compared with the control after
+      6 and 12 months.
+    note: Narrative summary of individual trials, not pooled.
+  - meta: '36601089'
+    outcome: cartilage_imaging
+    months: null
+    effect: inconclusive
+    where: conclusion
+    quote: Current RCTs cannot conclude a regenerative potential of ADMSCs.
+
+- id: certainty
+  kind: certainty
+  question: How certain is the evidence that MSCs help knee osteoarthritis?
+  expected:
+    verdict: uncertain
+    answer: 'Low. Formal GRADE ratings range from very low to moderate: very low for pain against placebo and hyaluronic
+      acid, moderate only after excluding high risk-of-bias trials, low to moderate for 12-month WOMAC. One meta-analysis
+      claims moderate-to-high certainty from per-study ratings.'
+    points:
+    - Most GRADE ratings are low or very low
+    - Moderate certainty appears only after excluding high risk-of-bias trials
+    - Ratings differ between meta-analyses
+  support:
+  - meta: '39360004'
+    outcome: vas_pain
+    months: 12
+    effect: benefit
+    estimate: 1.91 lower pain VAS score (95 % CI -3.23 to -0.59; p < 0.00001)
+    certainty: very low
+    where: abstract
+    quote: Meta-analyses data showed that, compared to viscosupplementation (VS), advanced MSC therapy resulted
+      in a 1.91 lower pain VAS score (95 % CI -3.23 to -0.59; p < 0.00001) for the treatment of knee OA after 12
+      months.
+  - meta: '39360004'
+    outcome: vas_pain
+    months: 12
+    effect: benefit
+    estimate: MD ‐1.54 (95 % CI ‐2.09 to −0.98)
+    certainty: moderate
+    where: results
+    quote: 'Pain (VAS): 12 months period: MD ‐1.54 (95 % CI ‐2.09 to −0.98).'
+  - meta: '41013772'
+    outcome: vas_pain
+    months: 12
+    effect: benefit
+    estimate: SMD = − 0.90, 95% CI − 1.57 to − 0.23; low certainty
+    certainty: low
+    where: results
+    quote: The network forest plot showed that, compared to the conventional therapy group, repeated MSC injection
+      may effectively reduce the VAS score at 12 months (SMD = − 0.90, 95% CI − 1.57 to − 0.23; low certainty) (Fig. 14E).
+  - meta: '40886001'
+    outcome: womac
+    months: 12
+    effect: benefit
+    certainty: low to moderate
+    where: discussion
+    quote: For the primary outcome of the WOMAC score at 12 months, the evidence was rated as low to moderate.
+  - meta: '40407910'
+    outcome: other
+    months: null
+    effect: mixed
+    certainty: moderate to high (overall; GRADE applied per study, not per outcome)
+    where: results
+    quote: Given the overall high and moderate final level of certainty, the confidence in the effect estimate is
+      therefore moderate to high and it is likely that the true effect may not be substantially different from the
+      estimate of the effect.
+    note: GRADE applied per study rather than per outcome.
+
+- id: publication-bias
+  kind: certainty
+  question: Is there evidence of publication bias in MSC trials for knee osteoarthritis?
+  expected:
+    verdict: contested
+    answer: Mixed. One meta-analysis detected publication bias (Egger's test p = 0.007); others found none on funnel
+      plots, and most did not test.
+    points:
+    - At least one meta-analysis detected publication bias
+    - Others found no publication bias
+  support:
+  - meta: '40407910'
+    outcome: publication_bias
+    months: null
+    effect: bias
+    estimate: intercept of 3.26447 with a t-value of 3.75116 and a p value of 0.00716
+    where: results
+    quote: This finding is corroborated by Egger's regression test, which yielded an intercept of 3.26447 with a
+      t-value of 3.75116 and a p value of 0.00716.
+  - meta: '40055739'
+    outcome: publication_bias
+    months: null
+    effect: no_bias
+    where: results
+    quote: 'No publication bias was detected in the funnel plot (Additional file 2: Figure S3).'
+  - meta: '39629035'
+    outcome: publication_bias
+    months: null
+    effect: no_bias
+    where: results
+    quote: All studies were within the 95% CI and equally distributed on the CI, indicating minimal publication
+      bias [Figure 7a-g].
+
+- id: pre-post
+  kind: certainty
+  question: Patients' scores improve a lot after MSC injection. Does that show MSCs work?
+  expected:
+    verdict: uncertain
+    answer: No. Large before-and-after improvements in MSC groups (WOMAC SMD about -2) include placebo response
+      and natural course; control groups also improve. Against placebo, the between-group difference is small for
+      pain and absent for WOMAC.
+    points:
+    - Before-and-after change is not a comparison with control
+    - Control groups also improve
+    - Against placebo the differences are small or absent
+  support:
+  - meta: '39629035'
+    outcome: womac
+    months: 12
+    effect: benefit
+    estimate: SMD = −2.39, 95% confidence interval (CI) (−3.19–−1.59); I2 = 95.04% (pre-post change, MSC arms)
+    where: results
+    quote: After a year of treatment, the WOMAC score changed significantly [SMD = −2.39, 95% confidence interval
+      (CI) (−3.19–−1.59), Figure 2a]; in the control group, the score was SMD =−0.95, 95% CI (−1.23–−0.68) [Figure
+      2b], and the CI for SMD did not overlap, indicating that MSC efficacy in pain reduction was significantly
+      better (P < 0.05).
+  - meta: '39629035'
+    outcome: womac
+    months: 12
+    effect: mixed
+    estimate: MSC SMD −2.39 (−3.19–−1.59) vs control SMD −0.95 (−1.23–−0.68); non-overlapping CIs, P < 0.05
+    where: results
+    quote: in the control group, the score was SMD =−0.95, 95% CI (−1.23–−0.68) [Figure 2b], and the CI for SMD
+      did not overlap, indicating that MSC efficacy in pain reduction was significantly better (P < 0.05).
+    note: The comparison with control is inferred from non-overlapping confidence intervals, not tested.
+  - meta: '41013772'
+    outcome: womac
+    months: 12
+    effect: benefit
+    estimate: SMD = −1.93, 95% CI − 2.46 to − 1.39, P < 0.00001
+    where: results
+    quote: Pooled analysis showed that at 12 months after MSC injection, both single and repeated injections resulted
+      in significant improvements in WOMAC total score compared to baseline (SMD = −1.93, 95% CI − 2.46 to − 1.39,
+      P < 0.00001), with substantial heterogeneity (I² = 78%) (Fig. 3C).
+  - meta: '39360004'
+    outcome: womac
+    months: 12
+    effect: no_difference
+    estimate: MD ‐0.02 (95 % CI ‐0.86 to 0.81)
+    where: results
+    quote: In the longer-term available (12 months), pooled results showed a MD ‐0.02 (95 % CI ‐0.86 to 0.81) [81].
+
+- id: clinical-importance
+  kind: certainty
+  question: Is the improvement from MSCs large enough to matter to patients?
+  expected:
+    verdict: uncertain
+    answer: Only in some comparisons. Against hyaluronic acid the pain difference (1.91 of 10) reaches a clinically
+      important difference, but the WOMAC difference does not; against placebo the pain difference (0.99) falls
+      short.
+    points:
+    - Against hyaluronic acid, the pain difference reaches a clinically important difference
+    - The WOMAC difference does not
+    - Against placebo, the pain difference falls short
+  support:
+  - meta: '39360004'
+    outcome: vas_pain
+    months: 12
+    effect: benefit
+    estimate: 1.91 lower; MCID 1.1 to 2/10
+    where: discussion
+    quote: Advanced MSC therapy was better than viscosupplementation to reduce pain and improve function of knee
+      OA after 12 months. The difference of VAS pain (1.91 lower) is considered to be clinically perceptible, as
+      it achieved the aimed minimal clinically important difference (MCID from 1.1 to 2/10) [82].
+  - meta: '39360004'
+    outcome: womac
+    months: 12
+    effect: benefit
+    where: discussion
+    quote: The same wasn't observed with WOMAC [83,81].
+  - meta: '39360004'
+    outcome: vas_pain
+    months: 12
+    effect: benefit
+    estimate: MD ‐0.99 (95 % CI ‐1.94 to −0.03)
+    where: results
+    quote: 'In the longer-term available (period of 12 months), pooled results showed MSC was associated with lower
+      pain VAS scores: MD ‐0.99 (95 % CI ‐1.94 to −0.03).'
