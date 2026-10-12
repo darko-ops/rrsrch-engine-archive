@@ -118,3 +118,7 @@ src/rrsrch/sources/            Europe PMC and ClinicalTrials.gov clients
 src/rrsrch/corpus/             discover (Table 1 → studies), snapshots, text extraction
 src/rrsrch/ledger/             Postgres: migrations and corpus load
 ```
+
+## License
+
+[Apache 2.0](LICENSE).
