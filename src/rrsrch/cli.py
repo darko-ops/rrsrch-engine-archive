@@ -12,6 +12,8 @@
   rrsrch gate-eval                         score the gate on its evaluation set
   rrsrch write "QUESTION"                  answer from the ledger; every sentence gated
   rrsrch trials reconcile [-v]             registrations against their papers: matched, drift, ...
+  rrsrch skeptic run                       find ledger claims that agree or contradict
+  rrsrch skeptic show                      list stored contradictions
   rrsrch bench check                       validate the benchmark against the answer key
   rrsrch bench run [--only ID]             write and score a report for each benchmark question
 """
@@ -347,6 +349,43 @@ def cmd_trials_reconcile(args) -> int:
     return 0
 
 
+def cmd_skeptic_run(args) -> int:
+    from .ledger import db
+    from .skeptic import run as skeptic
+    with db.connect() as conn:
+        db.migrate(conn)
+        rep = skeptic.scan(conn)
+    print(f"compared {rep.pairs_compared} claim pair(s) across {rep.claims} claim(s)")
+    if rep.skipped_same_text:
+        print(f"skipped {rep.skipped_same_text} near-duplicate pair(s) from the same source")
+    stored = rep.stored or {}
+    print(f"stored: {stored.get('contradicts', 0)} contradict, {stored.get('agrees', 0)} agree")
+    return 0
+
+
+def cmd_skeptic_show(args) -> int:
+    from .ledger import db
+    from .skeptic import run as skeptic
+    with db.connect() as conn:
+        db.migrate(conn)
+        rows = skeptic.contradictions(conn)
+        n_agree = conn.execute(
+            "SELECT count(*) FROM claim_agreements WHERE verdict = 'agrees'").fetchone()[0]
+    if not rows:
+        print(f"no contradictions stored ({n_agree} agreeing pair(s) on file)")
+        print("run `rrsrch skeptic run` after the reader has filled the ledger")
+        return 0
+    for r in rows:
+        print(f"#{r['id']}  {r['source_a']} ↔ {r['source_b']}")
+        print(f"  {r['detail']}")
+        print(f"  A [{r['claim_a_id']}]: {r['claim_a'][:200]}")
+        print(f"  B [{r['claim_b_id']}]: {r['claim_b'][:200]}")
+        if args.verbose:
+            print()
+    print(f"\n{len(rows)} contradiction(s), {n_agree} agreeing pair(s)")
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(prog="rrsrch")
     sub = p.add_subparsers(dest="group", required=True)
@@ -382,6 +421,12 @@ def main(argv: list[str] | None = None) -> int:
     tr = trials.add_parser("reconcile", help="registrations against their papers")
     tr.add_argument("-v", "--verbose", action="store_true")
     tr.set_defaults(fn=cmd_trials_reconcile)
+    skeptic = sub.add_parser("skeptic").add_subparsers(dest="cmd", required=True)
+    skeptic.add_parser("run", help="find ledger claims that agree or contradict").set_defaults(
+        fn=cmd_skeptic_run)
+    ss = skeptic.add_parser("show", help="list stored contradictions")
+    ss.add_argument("-v", "--verbose", action="store_true")
+    ss.set_defaults(fn=cmd_skeptic_show)
     bench = sub.add_parser("bench").add_subparsers(dest="cmd", required=True)
     bc = bench.add_parser("check", help="validate the benchmark against the answer key")
     bc.add_argument("-v", "--verbose", action="store_true")
