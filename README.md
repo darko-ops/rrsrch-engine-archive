@@ -14,9 +14,9 @@ osteoarthritis, over a fixed corpus. The build order:
 1. **Fixed corpus**: the studies included in recent meta-analyses, their
    trial registrations, and the claim-ledger schema. ← *done*
 2. **Reader → ledger → citation gate → writer**, with the clinical vocabulary
-   and the benchmark. ← *built; waiting on the first run on the DGX Spark*
-3. Skeptic and **trial reconciliation**. ← *reconciliation built; the skeptic
-   waits on ledger claims*
+   and the benchmark. ← *built; Spark reader smoke-tested on 2 papers*
+3. **Skeptic** and **trial reconciliation**. ← *both built; skeptic needs a
+   fuller ledger before its contradictions mean much*
 4. Live search, editable plan, and the reading interface.
 
 ## How the corpus is built
@@ -125,6 +125,28 @@ answer key, and the reader's and writer's **rejections by rule**. A report
 can score high on faithfulness by saying little, which is why coverage is
 never reported without it.
 
+## The skeptic
+
+The skeptic compares ledger claims to each other, by rule, with no model.
+Two claims are only judged when they speak to a compatible question: same
+population, overlapping outcome, compatible cell type and comparator, and
+compatible follow-up time. Then:
+
+| Verdict | Means |
+|---|---|
+| `agrees` | same direction on an overlapping outcome |
+| `contradicts` | different directions on an overlapping outcome (benefit vs no difference is a failed reproduction) |
+| `couldnt_compare` | not enough overlap — not stored, just skipped |
+
+Every stored row names the rule that decided it and the findings compared.
+Same-paper contradictions are kept: a study that reports both benefit and no
+difference on the same outcome is something a report should surface.
+
+```bash
+uv run rrsrch skeptic run     # scan the ledger; replaces previous rows
+uv run rrsrch skeptic show    # list contradictions with both claim texts
+```
+
 ## Trial reconciliation
 
 A ClinicalTrials.gov registration is what a team said it would measure; the
@@ -192,6 +214,7 @@ src/rrsrch/reader/             claim extraction with a local model
 src/rrsrch/writer/             claim retrieval and gated report writing
 src/rrsrch/bench/              benchmark checks and the benchmark run
 src/rrsrch/trials/             trial reconciliation: registry against paper
+src/rrsrch/skeptic/            claim-vs-claim agreement and contradictions
 benchmark/questions.yaml       the benchmark questions and expected answers
 ```
 
