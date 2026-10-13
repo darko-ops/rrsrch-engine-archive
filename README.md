@@ -17,7 +17,9 @@ osteoarthritis, over a fixed corpus. The build order:
    and the benchmark. ← *built; Spark reader smoke-tested on 2 papers*
 3. **Skeptic** and **trial reconciliation**. ← *both built; skeptic needs a
    fuller ledger before its contradictions mean much*
-4. Live search, editable plan, and the reading interface.
+4. **Live answer API** (`rrsrch serve`) for the site. ← *built; needs a running
+   ledger + model, and RRSRCH_ENGINE_URL on the site*
+5. Editable plan and the reading interface.
 
 ## How the corpus is built
 

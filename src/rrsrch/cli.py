@@ -14,6 +14,7 @@
   rrsrch trials reconcile [-v]             registrations against their papers: matched, drift, ...
   rrsrch skeptic run                       find ledger claims that agree or contradict
   rrsrch skeptic show                      list stored contradictions
+  rrsrch serve [--host] [--port]           HTTP answer API for the site (POST /v1/answer)
   rrsrch bench check                       validate the benchmark against the answer key
   rrsrch bench run [--only ID]             write and score a report for each benchmark question
 """
@@ -363,6 +364,12 @@ def cmd_skeptic_run(args) -> int:
     return 0
 
 
+def cmd_serve(args) -> int:
+    from .serve import http as server
+    server.run(host=args.host, port=args.port)
+    return 0
+
+
 def cmd_skeptic_show(args) -> int:
     from .ledger import db
     from .skeptic import run as skeptic
@@ -427,6 +434,10 @@ def main(argv: list[str] | None = None) -> int:
     ss = skeptic.add_parser("show", help="list stored contradictions")
     ss.add_argument("-v", "--verbose", action="store_true")
     ss.set_defaults(fn=cmd_skeptic_show)
+    sv = sub.add_parser("serve", help="HTTP answer API (POST /v1/answer)")
+    sv.add_argument("--host", default="127.0.0.1")
+    sv.add_argument("--port", type=int, default=8787)
+    sv.set_defaults(fn=cmd_serve)
     bench = sub.add_parser("bench").add_subparsers(dest="cmd", required=True)
     bc = bench.add_parser("check", help="validate the benchmark against the answer key")
     bc.add_argument("-v", "--verbose", action="store_true")
