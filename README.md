@@ -15,7 +15,8 @@ osteoarthritis, over a fixed corpus. The build order:
    trial registrations, and the claim-ledger schema. ← *done*
 2. **Reader → ledger → citation gate → writer**, with the clinical vocabulary
    and the benchmark. ← *built; waiting on the first run on the DGX Spark*
-3. Skeptic and trial reconciliation.
+3. Skeptic and **trial reconciliation**. ← *reconciliation built; the skeptic
+   waits on ledger claims*
 4. Live search, editable plan, and the reading interface.
 
 ## How the corpus is built
@@ -124,6 +125,39 @@ answer key, and the reader's and writer's **rejections by rule**. A report
 can score high on faithfulness by saying little, which is why coverage is
 never reported without it.
 
+## Trial reconciliation
+
+A ClinicalTrials.gov registration is what a team said it would measure; the
+paper is what it reported. `rrsrch trials reconcile` compares them by rule,
+with no model, and gives each trial-paper pair one of four neutral states:
+
+| State | Means |
+|---|---|
+| `matched` | the paper's declared primary outcome is registered as primary, at a registered time point |
+| `endpoint_drift` | the paper's primary outcome wasn't registered as primary (the reason says if it was registered as secondary), a registered primary outcome is missing from the full text, or the primary outcome is reported at an unregistered time |
+| `no_publication_found` | a completed registration with no linked paper, more than 24 months on (the strict rule) |
+| `couldnt_match` | the rules can't decide, and the reason says why |
+
+Each state carries its reasons and evidence: registry fields by path and
+passages by document offset. Two facts are recorded as flags, not states:
+registration after enrolment began, and a registry record edited after the
+paper's publication year. The current record is what's compared, and
+ClinicalTrials.gov's version history isn't open to outside callers, so an edit
+can hide drift.
+
+The rules lean toward `couldnt_match` rather than accusing a trial. Drift
+needs the paper to say what its primary outcome was; an outcome missing from
+an abstract proves nothing; a paper reporting two trials isn't attributed to
+either; and a paper that only cites a trial (the registry doesn't list it, the
+abstract doesn't name the trial, and no sentence calls it "our" trial) isn't
+reconciled against it.
+
+On the v1 corpus: **8 matched, 0 endpoint drift, 12 couldn't match** across
+20 trial-paper pairs. Most couldn't-match papers don't say which outcome was
+primary. One linked paper cites another team's trial only to size its sample.
+**28 of 47 studies name no ClinicalTrials.gov registration at all.** They may
+be registered elsewhere or not at all; only ClinicalTrials.gov was searched.
+
 ## Running it
 
 Needs Python 3.12+, [uv](https://docs.astral.sh/uv/) and Docker.
@@ -157,6 +191,7 @@ src/rrsrch/check/              clinical vocabulary and the citation gate
 src/rrsrch/reader/             claim extraction with a local model
 src/rrsrch/writer/             claim retrieval and gated report writing
 src/rrsrch/bench/              benchmark checks and the benchmark run
+src/rrsrch/trials/             trial reconciliation: registry against paper
 benchmark/questions.yaml       the benchmark questions and expected answers
 ```
 
