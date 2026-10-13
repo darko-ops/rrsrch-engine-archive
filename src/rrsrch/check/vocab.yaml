@@ -60,13 +60,13 @@ comparator:
 outcome:
   - id: womac_pain
     parent: womac
-    patterns: ['WOMAC[- ]pain', 'pain subscale of (?:the )?WOMAC']
+    patterns: ['WOMAC\)?[- ]pain', 'pain subscale of (?:the )?WOMAC']
   - id: womac_function
     parent: womac
-    patterns: ['WOMAC[- ](?:physical )?function', 'function subscale of (?:the )?WOMAC']
+    patterns: ['WOMAC\)?[- ](?:physical )?function', 'function subscale of (?:the )?WOMAC']
   - id: womac_stiffness
     parent: womac
-    patterns: ['WOMAC[- ]stiffness']
+    patterns: ['WOMAC\)?[- ]stiffness']
   - id: womac
     parent: clinical_score
     patterns: ['WOMAC', 'Western Ontario and McMaster']
@@ -108,7 +108,7 @@ outcome:
     patterns: ['SF-?36', 'SF-?12', 'short[- ]form(?: \(SF\)-?)? ?(?:36|12)']
   - id: radiography
     parent: structural
-    patterns: ['radiograph\w*', 'X-?rays?', 'joint space (?:width|narrowing)']
+    patterns: ['radiograph\w*', 'X-?rays?', 'joint space (?:width|narrowing)', 'femoro-?tibial (?:distance|space)']
   - id: kl_grade
     parent: structural
     patterns: ['Kellgren[- ]Lawrence', 'K-?L grade']

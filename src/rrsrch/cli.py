@@ -11,6 +11,7 @@
   rrsrch gate "SENTENCE" CLAIM_ID [...]    check a sentence against ledger claims
   rrsrch gate-eval                         score the gate on its evaluation set
   rrsrch write "QUESTION"                  answer from the ledger; every sentence gated
+  rrsrch trials reconcile [-v]             registrations against their papers: matched, drift, ...
   rrsrch bench check                       validate the benchmark against the answer key
   rrsrch bench run [--only ID]             write and score a report for each benchmark question
 """
@@ -321,6 +322,31 @@ def cmd_bench_run(args) -> int:
     return 0
 
 
+def cmd_trials_reconcile(args) -> int:
+    from collections import Counter
+    from .ledger import db
+    from .trials import reconcile
+    with db.connect() as conn:
+        db.migrate(conn)
+        results = reconcile.reconcile_all(conn)
+        n_sources, n_linked = conn.execute(
+            "SELECT count(*), count(*) FILTER (WHERE EXISTS (SELECT 1 FROM trial_links l "
+            "WHERE l.source_id = s.id)) FROM sources s").fetchone()
+    for r in results:
+        flags = f"  [{', '.join(r.flags)}]" if r.flags else ""
+        print(f"{r.nct_id}  {r.source_id or '-':<14} {r.state}{flags}")
+        if args.verbose or r.state == "endpoint_drift":
+            for why in r.reasons:
+                print(f"      {why}")
+    counts = Counter(r.state for r in results)
+    print("\n" + ", ".join(f"{s}: {counts.get(s, 0)}" for s in reconcile.STATES)
+          + f"  ({len(results)} trial-paper pairs)")
+    print(f"{n_sources - n_linked} of {n_sources} studies name no ClinicalTrials.gov registration in their text; "
+          f"they may be registered elsewhere or not at all.")
+    print("Only ClinicalTrials.gov was searched; trials registered elsewhere are not reconciled.")
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(prog="rrsrch")
     sub = p.add_subparsers(dest="group", required=True)
@@ -352,6 +378,10 @@ def main(argv: list[str] | None = None) -> int:
     ge = sub.add_parser("gate-eval", help="score the gate on its evaluation set")
     ge.add_argument("-v", "--verbose", action="store_true")
     ge.set_defaults(fn=cmd_gate_eval)
+    trials = sub.add_parser("trials").add_subparsers(dest="cmd", required=True)
+    tr = trials.add_parser("reconcile", help="registrations against their papers")
+    tr.add_argument("-v", "--verbose", action="store_true")
+    tr.set_defaults(fn=cmd_trials_reconcile)
     bench = sub.add_parser("bench").add_subparsers(dest="cmd", required=True)
     bc = bench.add_parser("check", help="validate the benchmark against the answer key")
     bc.add_argument("-v", "--verbose", action="store_true")
